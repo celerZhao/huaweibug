@@ -1,0 +1,3228 @@
+/**
+ *@Name:    layout-mobile.css
+ *@Object:  mobile
+ *@Author:  HerryLau
+ *@E-mail:  liuhaiyueherry@sina.com
+ *@Time:    2017.08.25
+*/
+
+@charset "UTF-8";
+body {
+    background-color: #f5f5f5;
+}
+
+.ui-dialog .ui-confirm-no, .ui-dialog .ui-confirm-submit {
+    font-size: 1.4rem !important;
+}
+
+.taste-title {
+    position: relative;
+    padding: 1rem 1rem 1rem 2rem;
+    border-bottom: 1px solid #bbb;
+    background: #fff;
+    font-size: 1.6rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.taste-title-new {
+    position: fixed;
+    width: 100%;
+}
+
+.taste-title:after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    border-bottom: 1px solid #b2b2b2;
+    color: #b2b2b2;
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+.btn-back {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    background: url("../img/icon-left.png") no-repeat center;
+    background-size: auto 20px;
+}
+
+.taste-title-right {
+    position: absolute;
+    right: 1.5rem;
+    font-size: 1.4rem;
+    color: #666;
+}
+
+/* pro-list s */
+.pro-list-tab,
+.about-nav {
+    width: 80%;
+    height: 3rem;
+    margin: 1.5rem auto;
+    border-radius: 2rem;
+    border: 2px solid #fc3635;
+    color: #fc3635;
+    overflow: hidden;
+}
+
+.about-nav {
+    width: 90% !important;
+}
+
+.pro-list-tab span {
+    float: left;
+    display: block;
+    width: 50%;
+    height: 3rem;
+    line-height: 2.8rem;
+    text-align: center;
+}
+
+.pro-list-tab span.active {
+    background-color: #fc3635;
+    color: #fff;
+}
+
+.pro-list > li {
+    margin-bottom: 1rem;
+    padding: 1.5rem 1rem 1rem;
+    background-color: #fff;
+}
+
+.product-new {
+
+}
+
+.pro-list-top {
+    display: block;
+    position: relative;
+    min-height: 5.5rem;
+    margin-bottom: 1rem;
+    padding: 0 0 1.5rem 8rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.pro-list-top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7rem;
+    padding: 1rem 0;
+    border-radius: .2rem;
+    background-color: #febf4e;
+    font-size: 1.8rem;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.pro-list-top-left > span {
+    position: relative;
+    top: -0.175rem;
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 2rem;
+    line-height: 1.4rem;
+    background-color: #fff;
+    font-size: 0.8rem;
+    color: #febf4e;
+}
+
+.pro-list-top > h3 {
+    margin: 0 0 .5rem;
+    padding: 0;
+    font-size: 1.3rem;
+    color: #69686b;
+}
+
+.pro-list-top > h3 > i {
+    position: relative;
+    top: -0.15rem;
+    display: inline-block;
+    padding: 0 0.2rem;
+    border-radius: 0.2rem;
+    background-color: #ea3534;
+    font-size: 0.8rem !important;
+    font-weight: normal;
+    color: #fff;
+}
+
+.pro-list-top > p {
+    margin: 0;
+    line-height: 1.2rem;
+}
+
+.pro-list-quota .pro-list-top .pro-list-top-left {
+    background-color: #f84145;
+}
+
+.pro-list-quota .pro-list-top .pro-list-top-left span {
+    color: #f84145;
+}
+
+.pro-list-bottom:before {
+    position: absolute;
+    left: 32%;
+    top: 1rem;
+    content: '＋';
+    color: #ea3534;
+    font-size: 2rem;
+}
+
+.pro-list-quota .pro-list-bottom:before {
+    content: '';
+}
+
+.btn-fixed a:after {
+    content: '';
+    position: absolute;
+    top: -0.8rem;
+    right: 0;
+    bottom: -0.8rem;
+    border-right: 1px solid #ddd;
+}
+
+.oil-price {
+    position: fixed;
+    right: 0;
+    bottom: 7rem;
+    width: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    border-radius: 3rem;
+    background-color: rgba(252, 54, 53, 0.6);
+    color: #fff;
+    z-index: 99;
+}
+
+.oil-card-recharge {
+
+}
+
+/* pro-list e */
+
+/* about s */
+.about-nav {
+    width: 90%;
+}
+
+.about-nav span {
+    width: 33.333333333%;
+}
+
+/* about e */
+
+/*oil-storage*/
+.border-top {
+    border-top: 1px solid #e8e8e8
+}
+
+.margin-bottom {
+    margin-bottom: 1rem;
+}
+
+.oil-card-main {
+    margin: 0 -1.5rem;
+    overflow: hidden;
+}
+
+.pb-60 {
+    padding-bottom: 6rem !important;
+}
+
+.cblack {
+    color: #000 !important;
+}
+
+.cred {
+    color: #fc3635 !important;
+}
+
+.cgray {
+    color: #888 !important;
+}
+
+.cgray9 {
+    color: #999 !important;
+}
+
+.cgray5d {
+    color: #5d5d5d !important;
+}
+
+.cwhite {
+    color: #fff !important;
+}
+
+.oil-bao {
+    height: 12.5rem
+}
+
+.dash-line:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 3.5rem;
+    border-right: 1px dashed #fff;
+    right: 0;
+    top: 3rem
+}
+
+.oil-bao-left {
+    width: 50%;
+    height: 10rem;
+}
+
+.oil-bao-desc {
+    height: 2.5rem;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0 1.5rem;
+    color: #fff;
+    font-size: 1.3rem;
+    position: absolute;
+    line-height: 2.5rem
+}
+
+.oil-card {
+    height: 13rem;
+    margin: .5rem 1rem;
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    color: #fff
+}
+
+.oil-card .left-clip,
+.oil-card .right-clip {
+    height: 2rem;
+    width: 2rem;
+    top: 58%;
+    background-color: #f5f5f5;
+    box-shadow: inset 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
+    margin-top: -1rem;
+}
+
+.oil-card .left-clip .clip-clip,
+.oil-card .right-clip .clip-clip {
+    width: 1rem;
+    height: 2rem;
+    background-color: #f5f5f5;
+}
+
+.oil-card .left-clip {
+    left: -1rem;
+    border-radius: 0 1rem 1rem 0;
+}
+
+.oil-card .left-clip .clip-clip {
+    left: 0
+}
+
+.oil-card .right-clip .clip-clip {
+    right: 0
+}
+
+.oil-card .right-clip {
+    right: -1rem;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.storage-card {
+    background-image: linear-gradient(156deg, #ffa264 0%, #dd4f7f 73%, #dd3b72 100%)
+}
+
+.fuel-card {
+    background-image: linear-gradient(148deg, #fc89e5 0%, #fc89e5 13%, #fc89e5 25%, #8f21f4 100%)
+}
+
+.oil-card .oil-card-quota {
+    height: 58%;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.5)
+}
+
+.oil-card .oil-card-detail li {
+    float: left;
+    width: 33.3%;
+    list-style: none;
+    text-align: center;
+    padding-top: 1.5rem;
+    line-height: 1em
+}
+
+.oil-card .oil-card-detail li.plus:after {
+    content: '+';
+    position: absolute;
+    right: -0.5rem;
+    top: 2.2rem;
+    font-size: 1rem;
+}
+
+/*兑付说明*/
+.duifu-box {
+    height: 2px;
+    background-color: #fc3635;
+    position: relative
+}
+
+.node {
+    width: 1rem;
+    height: 1rem;
+    background-color: #FC3635;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem
+}
+
+.stage1 {
+    left: 0
+}
+
+.stage2 {
+    left: 50%;
+    margin-left: -0.5rem
+}
+
+.stage3 {
+    right: 0
+}
+
+/*返回首页*/
+.back-home {
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 1rem;
+    line-height: 1.1em;
+    font-size: 1.4rem;
+    position: absolute;
+    border-radius: 50%;
+    top: -1rem;
+    left: 0;
+    text-align: center
+}
+
+/*覆盖dialog样式*/
+.ui-dialog-action button {
+    color: #fff !important;
+    background-color: #fc3635 !important;
+    margin-top: -1px !important;
+}
+
+.ui-dialog-action .ui-confirm-no {
+    color: #fff;
+}
+
+.ui-dialog-action {
+    border-top: none !important
+}
+
+/* list 组件*/
+.list-g li {
+    position: relative;
+    padding: .3rem 0;
+    background-color: #fff;
+    list-style: none;
+    color: #161616;
+    font-size: 1.2rem
+}
+
+.list-g li:after, .list-g li dl:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.list-g li dl {
+    list-style: none;
+}
+
+.list-g li dt {
+    float: left;
+}
+
+.list-g li dd {
+    float: right
+}
+
+.list-g li .info-tips {
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1.1rem;
+    color: #888
+}
+
+.list-g li .info-tips-ico {
+    position: absolute;
+    left: 0;
+    top: 0.7rem;
+    font-size: 1.2rem;
+}
+
+.list-g li .select-input {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    text-align: right;
+    font-size: 1.3rem;
+    color: #161616;
+    display: inline-block;
+    line-height: 3rem;
+    width: 10rem;
+    vertical-align: baseline
+}
+
+/* 带横向箭头的list */
+.list-arrow li .li-innner {
+    padding: 0 2.5rem 0 1.5rem;
+    line-height: 3.9rem;
+}
+
+.list-arrow li .arrow {
+    right: .5rem;
+    top: 2.2rem;
+    color: #aaa;
+    font-size: 1.3rem
+}
+
+/* 带纵向箭头的list/可扩展list */
+.list-arrow-v li {
+    padding: 0 1rem;
+    line-height: 2.6rem;
+}
+
+.list-arrow-v li .li-innner {
+    padding: 0.6rem 1.5rem 0.6rem 0.5rem;
+}
+
+.list-arrow-v li .arrow {
+    right: .7rem;
+    top: 1.8rem;
+    color: #aaa;
+    font-size: 1.3rem
+}
+
+.list-arrow-v li .arrow.up {
+    transform: rotate(-90deg)
+}
+
+.list-arrow-v li .arrow.down {
+    transform: rotate(90deg)
+}
+
+.list-arrow-v li .li-content {
+    padding: 0.5rem .5rem 0.3rem;
+    line-height: 1.6rem;
+    color: #666
+}
+
+.list-switch {
+    width: 4rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    position: absolute;
+    border: 1px solid #e4e4e4;
+}
+
+.list-switch .dot {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border: 1px solid #e4e4e4;
+    position: absolute;
+    top: -1px;
+    transition: all .5s ease-in .1s;
+}
+
+.list-switch.s-close {
+    background-color: #fdfdfd
+}
+
+.list-switch.s-close .dot {
+    left: -1px
+}
+
+.list-switch.s-open {
+    background-color: #4cd864;
+    border: 1px solid #4cd864;
+}
+
+.list-switch.s-open .dot {
+    right: -1px;
+}
+
+.list-arrow-v li .list-switch {
+    right: .5rem;
+    top: .7rem;
+}
+
+/*保险*/
+.border-item {
+    display: inline-block;
+    border: 1px solid #fc3635;
+    border-radius: 3px;
+    color: #fc3635;
+    padding: 0 0.5rem
+}
+
+/* 普通的list*/
+.list-normal li .li-innner {
+    padding: 0.5rem 1.5rem;
+    line-height: 3rem;
+}
+
+/*购买数量 控件*/
+.buy-num {
+    border: 1px solid #ddd;
+    width: 7.2rem;
+    height: 2.6rem;
+    margin: 0.1rem 3rem 0;
+    line-height: 0
+}
+
+.buy-minus, .buy-add {
+    width: 2.6rem;
+    height: 2.6rem;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    top: -1px;
+    line-height: 2.4rem
+}
+
+.buy-minus {
+    border-radius: 2px 0 0 2px;
+    left: -2.6rem;
+}
+
+.buy-add {
+    border-radius: 0 2px 2px 0;
+    right: -2.6rem;
+}
+
+.buy-num input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    line-height: 1;
+    background-color: #fff;
+    font-size: 1.2rem;
+}
+
+/*文本*/
+.text-content {
+    padding: 1.5rem
+}
+
+.text-spec {
+    font-size: .8rem;
+    border: 1px solid #fc3635;
+    color: #fc3635;
+    display: inline-block;
+    border-radius: 0.75rem;
+    line-height: 1.5rem;
+    padding: 0 .3rem;
+}
+
+/*购买按钮*/
+.bottom-bar {
+    height: 5rem;
+    padding-right: 13rem;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding-top: .5rem;
+    color: #161616
+}
+
+.bottom-bar .buy-now {
+    width: 11rem;
+    height: 5rem;
+    line-height: 5rem;
+    color: #fff;
+    background-image: linear-gradient(to right, #ff9d28, #f4bd46);
+    right: 0;
+    top: 0;
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.bottom-bar .buy-now.disabled {
+    background-color: #666666
+}
+
+.ui-confirm-title table td {
+    padding: 5px 0;
+    border-top: 1px solid #ccc;
+}
+
+/*油库动态*/
+.oil-depot-box {
+    background-color: #fff;
+    padding: 4rem 4rem 1rem;
+    margin: 0 -1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.oil-depot-box, .oil-depot-title {
+    background-color: #fff;
+    margin: 0 -1.5rem;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -moz-box-pack: justify;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -moz-box-align: end;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.oil-depot-title {
+    padding: 0 4rem 1rem;
+}
+
+.oil-depot-list {
+    width: 20%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -moz-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+.oil-depot-list li {
+    padding-top: .5rem;
+    list-style: none;
+    position: relative;
+    text-align: center;
+    height: 4rem;
+    line-height: 1;
+    font-size: .8rem;
+    color: #fff;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.oil-depot-list li .l-line, .oil-depot-list li .r-line {
+    position: absolute;
+    height: 2px;
+    width: 1px;
+}
+
+.oil-depot-list li .l-line {
+    left: -1px;
+}
+
+.oil-depot-list li .r-line {
+    right: -1px;
+}
+
+.oil-depot-list li .h-line.top {
+    bottom: 100%;
+}
+
+.oil-depot-list li .h-line.mid {
+    bottom: 66%;
+}
+
+.oil-depot-list li .h-line.bot {
+    bottom: 33%;
+}
+
+.oil-depot-list li:first-child {
+    border-radius: 0 0 5px 5px;
+}
+
+.oil-depot-list li:last-child .h-line.top {
+    display: none;
+}
+
+.oil-depot-list li:last-child {
+    padding-top: 1rem;
+    height: 5rem;
+    border-radius: 50% 50% 0 0/1rem 1rem 0 0;
+}
+
+.oil-depot-list.full-oil li:nth-child(2n), .oil-depot-list.full-oil li:nth-child(2n) .h-line {
+    background-color: #ff7219;
+}
+
+.oil-depot-list.full-oil li:nth-child(2n+1), .oil-depot-list.full-oil li:nth-child(2n+1) .h-line {
+    background-color: #ff904c;
+}
+
+.oil-depot-list.empty-oil li:nth-child(2n), .oil-depot-list.empty-oil li:nth-child(2n) .h-line {
+    background-color: #fc3536;
+}
+
+.oil-depot-list.empty-oil li:nth-child(2n+1), .oil-depot-list.empty-oil li:nth-child(2n+1) .h-line {
+    background-color: #fd5354;
+}
+
+.oil-depot-list.half-oil li, .oil-depot-list.half-oil li .h-line {
+    background: url("../img/half_bg.png") #ff904c 0 0 no-repeat;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -ms-background-size: 100% auto;
+    background-size: 100% auto;
+}
+
+.oil-depot-list.half-oil li:last-child {
+    background-position: 0 1rem;
+}
+
+.oil-depot-list.half-oil li .h-line.top {
+    background-color: #fc3536;
+}
+
+.oil-depot-list.half-oil li .top-red {
+    width: 100%;
+    height: 1rem;
+    border-radius: 50% 50% 0 0/1rem 1rem 0 0;
+    background-color: #fc3536;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.oil-depot-title .depot-item {
+    width: 20%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.oil-drop {
+    width: 1.5rem;
+    height: 2.5rem;
+    position: absolute;
+    background: url("../img/drop.png") 0 0 no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -ms-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-animation: animations 1s ease-out infinite;
+    -moz-animation: animations 1s ease-out infinite;
+    animation: animations 1s ease-out infinite;
+    left: 50%;
+    margin-left: -0.75rem;
+    top: 1rem;
+}
+
+@-webkit-keyframes animations {
+    0% {
+        -webkit-transform: translate(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(0, 60px);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes animations {
+    0% {
+        -moz-transform: translate(0);
+        opacity: 1;
+    }
+    100% {
+        -moz-transform: translate(0, 60px);
+        opacity: 0;
+    }
+}
+
+@keyframes animations {
+    0% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 60px);
+        opacity: 0;
+    }
+}
+
+.depot-local-list {
+    padding: 1rem 0;
+}
+
+.depot-local-list li {
+    color: #333;
+    list-style: none;
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.depot-local-list li:last-child {
+    margin-bottom: 0;
+}
+
+.depot-local-list li:before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1.5rem;
+    background: url("../img/loc.png") 0 0 no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -ms-background-size: 100% 100%;
+    background-size: 100% 100%;
+    left: 0;
+    top: .6rem;
+}
+
+/*油价走势*/
+.line-box {
+    margin: 0 -1.5rem;
+    display: none;
+    position: relative
+}
+
+.option-box {
+    padding: 1rem 0;
+}
+
+.option-item {
+    width: 46%;
+    border: 1px solid #bbbbbb;
+    height: 3rem;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.option-input {
+    width: 5rem;
+    border: none;
+    background-color: #fff;
+    padding: 0 5px;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    -o-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.option-input:read-only {
+    background-color: #fff;
+}
+
+.option-dropdown {
+    width: 3rem;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 0 3rem;
+    -moz-flex: 0 0 3rem;
+    -ms-flex: 0 0 3rem;
+    -o-flex: 0 0 3rem;
+    flex: 0 0 3rem;
+    border-left: 1px solid #bbbbbb;
+    background: url("../img/dropdown.png") 0 0 no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -ms-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.tab-box {
+    margin: 0 -1.5rem;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    height: 3rem;
+}
+
+.tab-box .tab-item {
+    width: 6rem;
+    line-height: 3rem;
+    text-align: center;
+    margin-bottom: -1px;
+}
+
+.tab-box .tab-item.sel {
+    border-bottom: 3px solid #fc3635;
+    color: #fc3635
+}
+
+.base-line {
+    position: absolute;
+    height: 2px;
+    background-color: #fc3635;
+}
+
+.base-line .base-name {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    font-size: 10px;
+    color: #fc3635;
+}
+
+/*油库实景*/
+.img-box img {
+    width: 100%;
+    height: auto;
+}
+
+.scene-fixed-btn {
+    background-color: #fc3635;
+}
+
+#duifu_mask {
+    display: none;
+    z-index: 99;
+}
+
+#duifu_container {
+    display: none;
+    z-index: 100;
+    height: 215px;
+    width: 100%;
+    position: fixed;
+    top: auto;
+    left: 0px;
+    bottom: 0px;
+}
+
+.hnpay-dialog {
+    height: auto !important;
+}
+
+#duifu_container h5 {
+    text-align: center;
+}
+
+#duifu_container .ui-confirm-title {
+    padding: 0 0 20px;
+    height: 180px;
+    overflow: auto;
+}
+
+.hnpay-dialog .ui-confirm-title {
+    height: auto !important;
+    padding: 0 !important;
+}
+
+#duifu_close_btn {
+    left: 10px !important;
+    color: #5c5c5c;
+}
+
+#duifu_date {
+    top: 30px;
+    width: 100%;
+}
+
+/* user center s */
+.uc-title {
+    border-bottom: 0;
+    background-color: #fc3635;
+    color: #fff;
+}
+
+.uc-title a {
+    color: #fff;
+
+}
+
+.uc-title .btn-back {
+    background-image: url("../img/icon-left-w.png");
+}
+
+.list-unstyled > li {
+    position: relative;
+    background-color: #fff !important;
+}
+
+.list-unstyled.list-border > li {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.list-unstyled.list-border > li:last-child {
+    border: none;
+}
+
+.full-list {
+    background-color: #fff;
+}
+
+.form-control {
+    border: none;
+    background-color: #fff;
+}
+
+.border-bottom-line {
+    border-bottom: 1px solid #e8e8e8;
+    background: #fafafa;
+}
+
+.setdpwd > li {
+    position: relative;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.setdpwd > li.list-dot {
+    padding-left: 3rem;
+}
+
+.my-list-style:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    left: 1.2rem;
+    top: 1.7rem
+}
+
+.my-balance:after {
+    background-color: #844d08;
+}
+
+.my-balance1:after {
+    background-color: #e2a14d;
+}
+
+.my-balance2:after {
+    background-color: #c9862f;
+}
+
+.my-oil-assets:after {
+    background-color: #d40a0a;
+}
+
+.my-oil-assets1:after {
+    background-color: #ff8080;
+}
+
+.my-oil-assets2:after {
+    background-color: #fd6060;
+}
+
+.my-refuel:after {
+    background-color: #0284a8;
+}
+
+.my-refuel1:after {
+    background-color: #2ed3ff;
+}
+
+.my-refuel2:after {
+    background-color: #2cc0e8;
+}
+
+.setdpwd > li label {
+    position: absolute;
+    z-index: 2;
+    top: 1.6rem;
+    width: 10.5rem;
+    line-height: 1;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.setdpwd > li i.icon-jiantou-copy2 {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    margin-top: -1rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.setdpwd > li .form-control {
+    padding-left: 10.5rem;
+    padding-right: 0;
+}
+
+.setdpwd > li .left {
+    width: 68%;
+}
+
+.setdpwd > li .right {
+    width: 32%;
+}
+
+.bought-content {
+    background-image: linear-gradient(120deg, #f3ba3d, #ff9726);
+    padding: 1rem 1.5rem;
+    color: #fff;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.bought-content .bought-item {
+    margin-top: 1rem;
+}
+
+.bought-content .bought-item .oil-num {
+    font-size: 1.9rem;
+}
+
+.bought-content .bought-item .bought-item-right {
+    margin-right: 0.5rem;
+    font-size: 1.22rem;
+}
+
+.setdpwd > li i.jiantou-own,
+.setdpwd > li i.jiantou-own2 {
+    position: inherit;
+    font-size: 1.2rem;
+    right: 0;
+    margin-top: -0.25rem;
+    margin-left: 0.3rem;
+}
+
+.font-color {
+    color: #000;
+}
+
+.list-li-con {
+    margin: 0.5rem 0;
+}
+
+.every-oil {
+    text-decoration: underline !important;
+    font-size: 1.2rem;
+}
+
+.setdpwd > li .w {
+    width: 10.5rem;
+}
+
+.my-li > li .w {
+    width: 11rem;
+}
+
+.bought-item-left i.icon-wenhao {
+    color: white;
+    font-size: 1.6rem;
+    margin-left: 0.2rem;
+}
+
+.setdpwd > li .w i.icon-wenhao {
+    font-size: 1.6rem;
+    margin-left: 0.4rem;
+}
+
+.bought-content .uc-line > div {
+    position: relative;
+}
+
+.bought-content .uc-line > div:after {
+    content: '';
+    position: absolute;
+    top: 0.8rem;
+    bottom: 0.8rem;
+    right: 0;
+    border-right: 1px solid #fed7d7;
+}
+
+.bought-content .uc-line > div:last-child:after {
+    border: none;
+}
+
+.uc-btn-danger {
+    border: none;
+    background-image: linear-gradient(to right, #ff9726, #f3ba3d);
+}
+
+.mask-inner-bottom {
+    display: none;
+    top: inherit;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+}
+
+.mask-inner-bottom.active {
+    display: block;
+    z-index: 99999;
+}
+
+.mask-inner .title {
+    color: #333 !important;
+    background: #e3e3e3;
+}
+
+.mask-inner .cont.alone {
+    padding: 1rem 1.5rem;
+!important;
+}
+
+/*我的油箱*/
+.container .bg-white .pay-suc,
+.add-card-img {
+    width: 9rem;
+    margin: 3rem auto 0;
+    display: block;
+}
+
+.oil-detail-link {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+}
+
+.text-primary {
+    color: #1955fa !important;
+}
+
+.text-underline {
+    text-decoration: underline !important;
+}
+
+/*我的订单*/
+.card_tip_link {
+    position: absolute;
+    /*right:2rem;*/
+    left: 2rem;
+    top: 1rem;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.oil-storage li {
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+}
+
+.order-num {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.bg-gray {
+    background-color: #c0c0c0;
+}
+
+.m-10 {
+    margin: 1rem !important;
+}
+
+.m-15 {
+    margin: 1.5rem !important;
+}
+
+.p-10 {
+    padding: 1rem !important;
+}
+
+.p-15 {
+    padding: 1.5rem !important;
+}
+
+.oil-storage-btn .btn {
+    width: 31%;
+    margin: 0 .25rem;
+    padding: .35rem 0;
+    border-radius: .4rem;
+}
+
+.oil-storage-btn .btn.btn-danger {
+    border:none;
+    background-image: linear-gradient(to right, #ff9726, #f3ba3d);
+}
+
+.icon-baozhang {
+    position: absolute;
+    right: 3rem;
+    top: -1.5rem;
+    width: 7rem;
+    height: 7rem;
+    background: url(../img/baozhang.png) no-repeat;
+    background-size: 100%;
+}
+
+/*账号绑定*/
+.form-group .right .btn {
+    color: #fff !important;
+}
+
+.btn-orange {
+    border: none;
+    background-image: linear-gradient(to right, #ff9d28, #f4bd46);
+    color: #fff;
+}
+
+.btn-phonecode {
+    color: #fc3635;
+    border: 1px solid #fc3635;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    width: 9.5rem;
+    text-align: center;
+}
+
+.btn-phonecode.disabled.active {
+    color: #999999;
+    border: 1px solid #999999;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+}
+
+.gh-desc {
+    text-align: center;
+    margin-top: 8rem;
+}
+
+/*车主认证*/
+
+.form-car, .form-car-add {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-color: #fff;
+}
+
+.form-car label, .form-car-add label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 6rem;
+    height: 3rem;
+    margin-top: -1.5rem;
+    line-height: 3rem;
+    text-align: left;
+    color: #333;
+}
+
+.form-car label i {
+    position: absolute;
+    top: 0.7rem;
+    right: -5rem;
+    padding: 0 0.8rem;
+    border-radius: 1rem;
+    border: 1px solid #e8e8e8;
+    font-size: 1rem;
+    white-space: nowrap;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    color: #888;
+    z-index: 2;
+}
+
+.form-car > li {
+    position: relative;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.form-car > li:last-child {
+    border: 0;
+}
+
+.form-car .form-group, .form-car-add .form-group {
+    width: 100%;
+}
+
+.form-car .form-group input {
+    padding-left: 6.5rem;
+    border: 0;
+    background: none;
+}
+
+.form-car .form-group i.icon {
+    position: absolute;
+    top: 50%;
+    right: -0.5rem;
+    margin-top: -0.9rem;
+    color: #aaa;
+}
+
+.upload-card,
+.car-txt {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    /*background-color: #fff;*/
+    color: #fff;
+    background-color: #e04040;
+    border-color: #e04040;
+}
+
+.car-addr {
+    right: -4.2rem !important;
+}
+
+.car-addr img {
+    width: 9px;
+}
+
+.car-txt {
+    padding: 1.5rem;
+}
+
+.upload {
+    float: left;
+    position: relative;
+}
+
+.upload_pic {
+    display: block;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    border-radius: 5px;
+}
+
+.upload-border {
+    padding: 0 !important;
+    background: url("../img/add.png") no-repeat 50% 20%;
+    background-size: 15% auto;
+    border: dashed 2px #ddd;
+}
+
+.upload-border > p {
+    margin: 0 auto;
+    padding: 6rem 0 3rem;
+}
+
+.fs-40 {
+    font-size: 4rem;
+}
+
+.border-color-ddd {
+    border-color: #ddd;
+}
+
+.mask-inner-upload {
+    display: block;
+    position: fixed;
+    left: 2rem;
+    right: 2rem;
+    border-radius: .4rem;
+    overflow: hidden;
+    z-index: 9999;
+    bottom: 6rem;
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    -webkit-transform: translateY(-80rem);
+    transform: translateY(-80rem);
+}
+
+.mask-inner-upload.active {
+    opacity: 1;
+    /*max-width:640px;*/
+    -webkit-opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.btnCont > img {
+    border-radius: .4rem;
+}
+
+/* user center e */
+
+/* 优惠券 s*/
+.tipbar {
+    padding: 00.5rem 1.5rem 0;
+    color: #e68e46;
+    background-color: #fff5eb;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.2rem;
+}
+
+.tipbar .inner {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 95%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.tipbar .link_arrow {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    margin-top: -1.1rem
+}
+
+.pagetit {
+    margin: 0 -1.5rem;
+    padding: .5rem 1.5rem;
+    color: #a0a0a0;
+}
+
+.zhichong .quan {
+    background: #fff;
+    border-radius: 0.4rem;
+    margin: 0.6rem;
+}
+
+.zhichong .quan .quan_name {
+}
+
+.zhichong .quan .quan_date {
+    font-size: 1.0rem;
+    color: #ccc;
+}
+
+.zhichong .quan_line {
+    border-top: 1px dotted #ccc;
+}
+
+.zhichong .quan_used_list p {
+    color: #ccc;
+}
+
+.zhichong .quan_enough p {
+    color: #ccc;
+}
+
+.zhichong .quan_enough p span {
+    color: #ccc;
+}
+
+.zhichong .radio_span {
+    width: 2rem;
+}
+
+.zhichong .radio_span .radio_yes {
+    background: url("../img/radio.png") no-repeat;
+    width: 2rem;
+    height: 2rem;
+    background-size: 80%;
+}
+
+.zhichong .radio_span .radio_no {
+    background: url("../img/radio_no.png") no-repeat;
+    width: 2rem;
+    height: 2rem;
+    background-size: 80%;
+}
+
+.btn-danger2 {
+    border: none;
+    background-image: linear-gradient(to right, #ff9d28, #f4bd46);
+    color: #fff;
+}
+
+.btn-blue {
+    border-color: #57caff;
+    color: #fff;
+    background: -webkit-linear-gradient(left, #57caff, #4184ff); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #57caff, #4184ff); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #57caff, #4184ff); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #57caff, #4184ff); /* 标准的语法 */
+}
+
+/* 优惠券 e*/
+
+/*底部按钮 s*/
+.btn-fixed2 {
+    padding-bottom: 0 !important;
+    z-index: 999;
+    border-top: 1px solid #e8e8e8;
+    background-color: #fff;
+}
+
+.btn-fixed2 a {
+    position: relative;
+    display: block;
+    padding: 2rem 0 0.25rem;
+    color: #999;
+    font-size: 1rem;
+}
+
+.btn-fixed2 a.active {
+    color: #ff9d28;
+}
+
+.btn-fixed2 a:before {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    top: -0.25rem;
+    left: 50%;
+    margin-left: -1.5rem;
+}
+
+.icon-jiayouzhan1:before,
+.icon-find12:before {
+    top: -0.75rem !important;
+    font-size: 2.8rem !important;
+}
+
+.icon-home1.active:before {
+    content: '\e916';
+}
+
+.icon-oil1.active:before {
+    content: '\e91e';
+}
+
+.icon-find1.active:before {
+    content: '\e914';
+}
+
+.icon-me1.active:before {
+    content: '\e918';
+}
+
+.btn-fixed2 a:after {
+    border: 0;
+}
+
+/*底部按钮 e*/
+
+/* index s*/
+.text-grey {
+    color: #999;
+}
+
+.bg-646463 {
+    background-color: #646463;
+}
+
+.text-darkgrey {
+    color: #666 !important;
+}
+
+.card-disable .text-darkgrey {
+    color: #999 !important;
+}
+
+.card-disable img {
+    opacity: 0.5;
+}
+
+.i-down-app {
+    height: 5rem;
+    padding: 1rem 8rem 1rem 5rem;
+    line-height: 1.4rem;
+    overflow: hidden;
+}
+
+.i-down-logo {
+    top: .8rem;
+    left: 1rem;
+    width: 3rem;
+    height: 5rem;
+}
+
+.i-down-txt p {
+    margin-bottom: 0;
+}
+
+.i-down-btn .btn {
+    width: 7rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    right: 1rem;
+    top: 50%;
+    margin-top: -1.2rem;
+    padding: 0;
+    border-color: #fc3635;
+    background-color: #fc3635;
+    font-size: 1rem;
+}
+
+.i-tag a {
+    display: block;
+    padding: 0;
+    font-size: 1rem;
+    color: #69686b;
+}
+
+.i-tag a img {
+    width: 3rem;
+}
+
+.i-list-title {
+    margin: 0;
+    padding: 0 0 0.5rem 1.8rem;
+    font-size: 1.2rem;
+}
+
+.i-list-title.bg-white {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding: 0.5rem 1.5rem 0.5rem 3.2rem;
+}
+
+.i-list-title > img {
+    position: absolute;
+    top: 0.1rem;
+    left: -0.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.i-list-title.bg-white > img {
+    top: 0.6rem;
+    left: 1rem;
+}
+
+.pro-list-quota-top .pro-list-top-left {
+    background-color: #fe5555;
+}
+
+.pro-list-quota-top .pro-list-top-left span {
+    color: #fe5555;
+}
+
+.i-bottom-txt span {
+    display: inline-block;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    padding: 0 0.5rem;
+    border: 1px solid #ea3534;
+    border-radius: 1.5rem;
+    font-size: 0.8rem;
+    color: #ea3534;
+}
+
+/* index e*/
+
+/*find s*/
+.f-cons-title {
+    height: 4rem;
+    padding-left: 4.3rem;
+    line-height: 4rem;
+}
+
+.f-cons-title:after {
+    position: absolute;
+    content: '';
+    left: 1.5rem;
+    right: 1.5rem;
+    height: 1px;
+    bottom: 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.f-cons-title > img {
+    left: 1.5rem;
+}
+
+.f-cons-list > a {
+    padding: 0;
+}
+
+.f-cons-list > a > img {
+    width: 3rem;
+}
+
+.f-cons-list > a > div {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    white-space: nowrap;
+}
+
+.f-cons-title i.icon-xiangxiafanye {
+    margin: 1.5rem 1.5rem 0 0;
+}
+
+.f-cons-title.active i.pull-right {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
+
+/*find e*/
+
+/*my s*/
+.my-user {
+    height: 4rem;
+    margin-bottom: 1rem;
+    padding-left: 5rem;
+}
+
+.my-user-bzz {
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    z-index: 99;
+}
+
+.my-user-img {
+    left: 0;
+    top: 0;
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid #f96d66;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.my-user-info {
+    position: relative;
+    top: 1rem;
+}
+
+.my-user-name {
+    margin-right: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.my-user-name:after {
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0.4rem;
+    right: 0;
+    border-right: 1px solid #fcb7b3;
+}
+
+.my-user-icon span {
+    display: block;
+    position: relative;
+    top: 0.25rem;
+    float: left;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.8rem;
+    border: 1px solid #fdc9c7;
+    border-radius: 1rem;
+    background: url("../img/m-icon01-1.png") no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.my-user-icon span.my-user-icon-02 {
+    background-image: url("../img/m-icon02-1.png");
+}
+
+.my-user-icon span.my-user-icon-03 {
+    background-image: url("../img/m-icon03-1.png");
+}
+
+.my-user-icon span.my-user-icon-01.active {
+    background-image: url("../img/m-icon01-2.png");
+}
+
+.my-user-icon span.my-user-icon-02.active {
+    background-image: url("../img/m-icon02-2.png");
+}
+
+.my-user-icon span.my-user-icon-03.active {
+    background-image: url("../img/m-icon03-2.png");
+}
+
+.my-user-icon span i {
+    left: -2rem;
+    top: -2.5rem;
+    height: 1.6rem;
+    line-height: 1.5rem;
+    padding: 0 0.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid #fff;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.my-user-icon span i:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 1.45rem;
+    width: 1.5rem;
+    height: 0.8rem;
+    margin-left: -0.75rem;
+    background: url("../img/m-icon-down.png") no-repeat 0 0;
+}
+
+.my-user-icon span.active i {
+    display: none;
+}
+
+.my-user-set {
+    top: 0.8rem;
+    right: 0;
+}
+
+.my-user-set > img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.my-li > li label > img {
+    position: relative;
+    top: -0.15rem;
+    left: -0.65rem;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.my-li > li .form-control {
+    padding-left: 10rem;
+    padding-right: 1rem;
+}
+
+.my-li > li .form-control.input-arrow {
+    padding-left: 0;
+    padding-right: 2rem;
+    padding-top: 0;
+    height: 3rem;
+}
+
+.pl-8 {
+    padding-left: 8rem !important;
+}
+
+.my-li > li .form-control > span {
+    position: relative;
+    top: 0.2rem;
+}
+
+.my-li .btn-down-app {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    height: 2.6rem;
+    padding: 0 0.8rem;
+    margin-top: -1.3rem;
+    line-height: 2.4rem;
+    border: 1px solid #fc3635;
+    color: #fc3635;
+}
+
+.my-li li i.jiantou-own {
+    position: inherit;
+    font-size: 1.2rem;
+    right: 0;
+    margin-top: -0.25rem;
+    margin-left: 0.3rem;
+}
+
+.my-li li i.icon-jiantou-copy2,
+.my-li li i.icon-tishikuangjingshi,
+i.icon-chevron-copy-copy-copy-copy-copy-copy,
+.set-payment-pw i.icon-wenhao {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    margin-top: -1rem;
+    height: 2rem;
+    line-height: 2.3rem;
+    font-size: 1.2rem;
+    -webkit-text-stroke: inherit;
+}
+
+i.icon-chevron-copy-copy-copy-copy-copy-copy:before {
+    content: "\e688";
+}
+
+.set-payment-pw i.icon-wenhao {
+    right: 1.5rem;
+}
+
+.my-li .my-spot {
+    position: relative;
+    top: -3px;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #ea3534;
+}
+
+@media (max-width: 320px) {
+    .my-li > li .w {
+        width: 9.5rem;
+    }
+
+    .my-li > li .form-control {
+        padding-left: 9.5rem;
+    }
+
+    .my-li .btn-down-app {
+        padding: 0 0.2rem;
+    }
+}
+
+/*my e*/
+
+/*f-activity s*/
+.f-activity-li li,
+.oil-news > a {
+    position: relative;
+    padding: 1rem;
+    border-bottom: 1px solid #e8e8e8;
+    overflow: hidden;
+}
+
+.f-activity-li li:last-child,
+.oil-news > a:last-child {
+    border-bottom: 0;
+}
+
+.f-activity-li li a.btn {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    width: auto;
+    margin-top: -0.5rem;
+    padding: 0.2rem 0.8rem;
+    font-size: 1.2rem;
+}
+
+.f-activity-over:after {
+    display: block !important;
+    content: '' !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, .6) url("../img/img-over.png") no-repeat 80% 1rem;
+    background-size: auto 75%;
+    z-index: 999;
+}
+
+/*f-activity e*/
+
+/*oil news s*/
+.oil-news > a {
+    padding-left: 9rem;
+}
+
+.oil-news > a > div:first-child {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 7rem;
+    margin-right: 1rem;
+    border: 1px solid #bbb;
+}
+
+.oli-news-ud p {
+    padding: 0.8rem 0;
+}
+
+.oli-news-ud p > img {
+    width: auto;
+    height: 1.6rem;
+    margin-right: 0.5rem;
+}
+
+.oli-news-ud div {
+    border-top: 1px solid #bbb;
+    background-color: #f5f5f5;
+}
+
+.oil-news > a > div:last-child p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.lh-16 {
+    line-height: 1.6rem;
+}
+
+.text-green {
+    color: #076700 !important;
+}
+
+.text-lightgreen {
+    color: #62b94a !important;
+}
+
+/*oil news e*/
+
+/*my member s*/
+.mb-img {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    margin: 1.5rem 0 1rem;
+    border-radius: 3rem;
+    background: url("../img/img-member.jpg") no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.mb-img img {
+    left: 0;
+    top: 0;
+    position: absolute;
+    border-radius: 3rem;
+}
+
+.mb-tag span {
+    padding: 1.5rem 0 1rem;
+    color: #333;
+}
+
+.mb-tag span.active {
+    border-bottom: 2px solid #fc3536;
+    font-weight: bold;
+    color: #fc3635;
+}
+
+.mb-cons > div > a:first-child:after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    right: 0;
+    border-right: 1px solid #e8e8e8;
+}
+
+.mb-jf-rule {
+    top: 1rem;
+    right: 1.5rem;
+}
+
+/*my member e*/
+
+/*my oil card s*/
+.bought-content .icon-qita {
+    top: 1.25rem;
+    right: 1rem;
+}
+
+.m-oil-card ul > li:first-child {
+    border-right: 1px solid #e8e8e8;
+}
+
+.m-oil-card-tb {
+    width: 100%;
+    background-color: #fff5f5;
+}
+
+.m-oil-card-tb td {
+    padding: 0.8rem 1rem;
+    border-top: 1px solid #fecfcf;
+    border-bottom: 1px solid #fecfcf;
+    line-height: 1.6rem;
+}
+
+.m-oil-card-tb td:first-child {
+    border-right: 1px solid #fecfcf;
+}
+
+.m-oil-card-plan li {
+    font-size: 1.2rem;
+}
+
+.m-oil-card-plan li:first-child {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.m-oil-card-plan li > span {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.m-oil-card-radio span:first-child i {
+    content: '';
+    position: relative;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url("../img/m-icon-radio01.png") no-repeat center;
+    background-size: 1.6rem auto;
+    z-index: 2;
+}
+
+.m-oil-card-radio span.active i {
+    background-image: url("../img/m-icon-radio02.png");
+}
+
+.m-oil-card-radio .line {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    bottom: -1rem;
+    width: 1px;
+    margin: 0.4rem -0.08rem 0 0;
+    border-right: 1px solid #e8e8e8;
+    z-index: 1;
+}
+
+@media (max-width: 320px) {
+    .m-oil-card-radio .line {
+        margin-right: -0.05rem;
+    }
+}
+
+/*my oil card e*/
+
+/*my fuel card s*/
+.btn-white {
+    border-color: #fd9a27 !important;
+    background-color: #fff !important;
+    color: #fd9a27 !important;
+}
+
+.fuel-card .img-oil {
+    position: absolute;
+    top: 50%;
+    width: 7rem;
+    height: 4.6rem;
+    margin: -2.3rem 0 0;
+    border-radius: .2rem;
+    background-color: #f5f5f5;
+    line-height: 4.6rem;
+}
+
+.fuel-card .img-oil img {
+    width: auto;
+    height: 3.6rem;
+}
+
+.fuel-card .img-oil.bg-white:after {
+    content: '';
+    position: absolute;
+    top: 1.25rem;
+    bottom: 1.25rem;
+    right: 0.7rem;
+    border-right: 1px solid #999;
+}
+
+.fuel-card .form-control {
+    height: auto;
+    padding-left: 8rem !important;
+}
+
+.fuel-card .form-control p:last-child {
+    margin-bottom: 0;
+}
+
+/*my fuel card e*/
+
+/*oil card package s*/
+.mask-inner .list-unstyled > li {
+    background-color: transparent !important;
+}
+
+.mask-inner .form-control {
+    border: 0.1rem solid #ccc;
+    background-color: transparent;
+}
+
+.mask-inner .btn-danger, .mask-inner .btn-submit {
+    border-color: #ff7219;
+    background-color: #ff904c;
+}
+
+.rechargeList li {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.rechargeList li:last-child {
+    border-bottom: none;
+}
+
+.fluid-model {
+    padding: 0 1rem;
+}
+
+.fluid-model [class^='col-xs-'] {
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.fluid-model .inner {
+    display: block;
+    margin: 0 .5rem;
+    padding: 0.5rem 0;
+    border: .1rem solid #bbb;
+    border-radius: .3rem;
+}
+
+.fluid-model .inner.active {
+    color: #fff;
+    border-color: #fd9a27;
+    background-color: #fd9a27;
+}
+
+.oc-form {
+    background-color: #fff;
+}
+
+.oc-form .form-group {
+    margin-bottom: 0;
+}
+
+.oc-form .form-group .form-control {
+    border: none;
+    background-color: transparent;
+}
+
+/*#phoneCodeBtn{color: #fff!important;}*/
+.sell-out {
+    height: 25rem;
+}
+
+.sell-out .sells {
+    width: 10rem;
+    height: 10rem;
+    margin: 7.5rem auto;
+    display: block;
+}
+
+.oc-order-icon {
+    border-bottom: 1px solid #ebebeb
+}
+
+.oc-order-icon span.suc,
+.oc-order-icon span.fail {
+    display: inline-block;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    padding-left: 4.5rem;
+    background: url("../img/icon-suc.png") no-repeat 0 0;
+    background-size: auto 100%;
+}
+
+.oc-order-icon span.fail {
+    background-image: url("../img/icon-fail.png") !important;
+}
+
+/*oil card package e*/
+
+/*recommend s*/
+.re-service-detail li {
+    position: relative;
+    padding: 1rem 1.5rem;
+    overflow: hidden;
+}
+
+.re-service-detail li:after {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 0;
+    width: 91%;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.re-service-detail li:last-child:after {
+    border-bottom: 0;
+}
+
+/*recommend e*/
+
+/*优惠券 s*/
+.quan_tab .quan_active {
+    border-bottom: 0.2rem solid #187EEA;
+    padding-bottom: 1rem;
+    color: #187EEA
+}
+
+.quan_tab .quan_active a {
+    color: #187EEA !important;
+}
+
+.quan_tab a {
+    color: #000 !important;
+}
+
+.quan_no {
+    background-image: url("../img/quan_no.png");
+    width: 6rem;
+    height: 6rem;
+    background-size: 100%;
+}
+
+.quan {
+    background: #fff;
+    border-radius: 0.4rem;
+    margin: 0.6rem;
+}
+
+.quan .quan_name {
+}
+
+.quan .quan_date {
+    font-size: 1.0rem;
+    color: #ccc;
+}
+
+.quan_line {
+    border-top: 1px dotted #ccc;
+}
+
+.quan_used_list p {
+    color: #ccc;
+}
+
+.quan_enough p {
+    color: #ccc;
+}
+
+.quan_enough p span {
+    color: #ccc;
+}
+
+.radio_span {
+    width: 2rem;
+}
+
+.radio_span .radio_yes {
+    background: url("../img/radio.png") no-repeat;
+    width: 2rem;
+    height: 2rem;
+    background-size: 80%;
+}
+
+.radio_span .radio_no {
+    background: url("../img/radio_no.png") no-repeat;
+    width: 2rem;
+    height: 2rem;
+    background-size: 80%;
+}
+
+/*优惠券 e*/
+.query-diy {
+    line-height: 3rem;
+}
+
+.query-diy input[type=text] {
+    border-radius: 3px;
+    border: 1px solid #bbbbbb;
+    background-color: transparent;
+    width: 36%;
+    float: left;
+    line-height: 3rem;
+}
+
+.query-diy span {
+    width: 5%;
+    text-align: center;
+    float: left;
+    line-height: 2rem;
+    padding: .5rem;
+}
+
+.query-diy input[type=button] {
+    width: 18%;
+    float: right;
+    line-height: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: #FC3635;
+    color: #fff;
+    border-radius: 3px
+}
+
+/** my message **/
+.margin-0 {
+    margin: 0 !important;
+}
+
+.border-radius-0 {
+    border-radius: 0 !important
+}
+
+.fixed-txt {
+    position: fixed;
+    left: 0;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.vc-user span.left {
+    width: 60%;
+    padding-left: 9rem;
+}
+
+.vc-user span.left input {
+    height: auto;
+    padding: 0.8rem;
+    border: 1px solid #cacaca;
+}
+
+.vc-user span.right {
+    width: 40%;
+}
+
+.vc-user span.right a.btn {
+    height: auto;
+    padding: 0.8rem 0 !important;
+    text-align: center;
+}
+
+.sms-code input {
+    padding: 0.8rem 11rem 0.8rem 0.8rem !important;
+    border: 1px solid #cacaca;
+}
+
+.sms-code a.btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 11rem;
+    height: 3.6rem;
+    padding: 0 !important;
+    border-radius: 0 .4rem .4rem 0;
+    line-height: 3.6rem;
+    color: #666;
+}
+
+.mask-li > li label {
+    left: 1.5rem;
+    width: 8rem;
+    padding-left: 1.5rem;
+    font-size: 1.4rem;
+    text-align: left;
+    color: #676767;
+}
+
+.mask-li > li .form-control {
+    padding-left: 0;
+}
+
+.border-right-grey {
+    border-right: solid 1px #d4d4d4;
+}
+
+#news_titles .swiper-slide a {
+    width: 100%;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 24px;
+    height: 24px;
+    white-space: nowrap
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.list-switch.disable {
+    background-color: #ddd;
+}
+
+.my-underline a {
+    border-bottom: 0.5px solid #fff;
+    line-height: 1.3rem;
+}
+
+.text-lightblack {
+    color: #333 !important;
+}
+
+.note_title a {
+    width: 100%;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+
+#cards_close_btn {
+    left: 10px !important;
+    color: #5c5c5c;
+}
+
+.slide-block {
+    height: 4rem;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    padding: 0 3.2%;
+    background: -moz-linear-gradient(left, #ff8a6f 0%, #ff4026 100%);
+    background: -webkit-linear-gradient(left, #ff8a6f 0%, #ff4026 100%);
+    background: -o-linear-gradient(left, #ff8a6f 0%, #ff4026 100%);
+    background: -ms-linear-gradient(left, #ff8a6f 0%, #ff4026 100%);
+    background-image: linear-gradient(left, #ff8a6f 0%, #ff4026 100%);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.slide-block-line {
+    width: 1px;
+    background-color: #f2f2f2;
+    position: relative;
+    z-index: 50;
+}
+
+.slide-block-mask {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left:20%
+}
+
+.yyqy {
+    width: 8rem;
+    position: relative;
+    padding-left: 2rem;
+    color: #881d22;
+}
+
+.yyqy:after {
+    content: '';
+    position: absolute;
+    width: 1.7rem;
+    height: 2rem;
+    background: url("../img/logo.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    left: 0;
+    top: 0;
+}
+
+.yyqy-right {
+    word-break: break-all
+}
+
+.ml160 {
+    margin-left: 8rem;
+}
+
+.ui-dialog-close,
+.ui-dialog-close:active,
+#cards_close_btn,
+#cards_close_btn:active {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*爆款产品*/
+.hot-pro {
+    padding: 0 1rem
+}
+
+.hot-pro-title {
+    margin-top: 1rem;
+    padding: 0;
+    font-size: 1.3rem;
+    color: #69686b;
+}
+
+.hot-pro-title .tips {
+    font-size: 1rem;
+    border: 1px solid #FC3635;
+    padding: 0 .5rem;
+    border-radius: 2px;
+    line-height: 1.3em;
+    color: #FC3635;
+    display: inline;
+    position: relative;
+    top: -1px;
+}
+
+.left-pro {
+    width: 49%;
+}
+
+.left-pro img {
+    width: 100%;
+    height: auto
+}
+
+.left-pro .left-pro-desc {
+    left: 1rem;
+    top: 0;
+}
+
+.left-pro .left-pro-desc .text1 {
+    color: rgba(255, 255, 255, .5)
+}
+
+.left-pro .left-pro-desc .text3 {
+    color: rgba(255, 255, 255, .7)
+}
+
+/*完善银行卡信息身份证和手机号placeholder字体太大显示不全*/
+.place-txt {
+    padding-right: 0 !important;
+}
+
+.place-txt::-moz-placeholder {
+    font-size: 1rem
+}
+
+.place-txt:-ms-input-placeholder {
+    font-size: 1rem
+}
+
+.place-txt::-webkit-input-placeholder {
+    font-size: 1rem
+}
+
+@media (max-width: 320px) {
+    .my-li > li .pl-8 {
+        padding-left: 5.5rem !important;
+    }
+}
+
+.bank-card-checked {
+    background: url("../img/icon-bank-checked.png") no-repeat 100% 50%;
+    background-size: 1.6rem auto;
+}
+
+.sms-btn-enable {
+    background-color: #FF9933;
+}
+
+.prefect-bank-text > li > label {
+    top: 1.8rem !important;
+}
+
+/********** 升数卡 *******/
+.literCard-title {
+    font-weight: 600;
+}
+
+.literCardlist {
+    margin: 0 .5rem;
+}
+
+#literCardList li {
+    background-color: inherit !important;
+}
+
+.literCardlist .literCard {
+    border: 2px solid #ffffff;
+    border-radius: .2rem;
+    -webkit-box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, .25);
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, .25);
+}
+
+.literCard.active {
+    border: 2px solid #ff0000;
+}
+
+/***** 升数加油码  ****/
+.literCard-qrCode {
+    margin: .5rem;
+
+    border: 1px solid #ffffff;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, .25);
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, .25);
+}
+
+.icon-scan {
+    width: 1.4rem;
+}
+
+.literCard-qrCode .imgCode {
+    display: block;
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.pwd-input {
+    background: url(../img/input-line.png) repeat-x;
+    background-size: 4.2rem 4rem;
+    padding-left: 3rem;
+    letter-spacing: 3.1rem;
+}
+
+@media (max-width: 375px) {
+    .pwd-input {
+        background-size: 4.1rem 4rem;
+        padding-left: 2.9rem;
+        letter-spacing: 3.03rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .pwd-input {
+        background-size: 3.29rem 4rem;
+        padding-left: 2.5rem;
+        letter-spacing: 2.41rem;
+    }
+}
+
+/***升数卡 加油站***/
+.gasStation {
+    margin: .5rem;
+    border: 1px solid #f5f5f5;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.gasStation .station-quota {
+    border-bottom: 1px dashed #f4f4f4;
+}
+
+.gasStation .station-detail {
+    border-bottom: 1px solid #f4f4f4;
+    margin: 1rem;
+}
+
+.gasStation .station-icon {
+    width: 6rem;
+    top: -1.5rem;
+    right: -0.5rem;
+}
+
+/**定额 定升*/
+.dinge {
+    margin-right: 0.5rem;
+    padding: 0.1rem 0.8rem;
+    color: #ffffff;
+    border-radius: 0.4rem;
+    background: #fd9a27;
+}
+
+.dingsheng {
+    margin-right: 0.5rem;
+    padding: 0.1rem 0.8rem;
+    color: #ffffff;
+    border-radius: 0.4rem;
+    background: #fe4936;
+}
+
+.gasStation .left-clip,
+.gasStation .right-clip {
+    height: 2rem;
+    width: 2rem;
+    top: 11.2rem;
+    background-color: #f5f5f5;
+    box-shadow: inset 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
+    margin-top: -1rem;
+}
+
+.gasStation.fail .left-clip,
+.gasStation.fail .right-clip {
+    height: 2rem;
+    width: 2rem;
+    top: 5rem;
+    background-color: #f5f5f5;
+    box-shadow: inset 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
+    margin-top: -1rem;
+}
+
+.gasStation .left-clip .clip-clip,
+.gasStation .right-clip .clip-clip {
+    width: 1rem;
+    height: 2rem;
+    background-color: #f5f5f5;
+}
+
+.gasStation .left-clip {
+    left: -1rem;
+    border-radius: 0 1rem 1rem 0;
+}
+
+.gasStation .left-clip .clip-clip {
+    left: 0
+}
+
+.gasStation .right-clip .clip-clip {
+    right: 0
+}
+
+.gasStation .right-clip {
+    right: -1rem;
+    border-radius: 1rem 0 0 1rem;
+}
+
+/****** stationManager  login *****/
+.stationManager-login .icon-yonghu,
+.stationManager-login .icon-mima {
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.btn-logOut {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    background: url(../img/logOut.png) no-repeat center;
+    background-size: auto 20px;
+}
+
+.stationManager-rmb {
+    width: 3rem;
+
+}
+
+.stationIcon-rmb {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(../img/rmb.png) no-repeat;
+    background-size: 2.5rem 2.5rem;
+}
+
+.station-form-label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 10rem;
+    height: 2rem;
+}
+
+.station-form-input {
+    padding-left: 10rem;
+}
+
+.btn-link2 {
+    color: #81b6ff;
+}
+
+.pay-order-bank-img > img {
+    width: auto;
+    height: 3rem;
+}
+
+.pay-order-method {
+    position: relative;
+    top: 0.2rem;
+    line-height: 1.4rem;
+}
+
+.order-pay-recom {
+    position: absolute;
+    top: 50%;
+    right: 3rem;
+    display: inline-block;
+    height: 2rem;
+    margin-top: -1rem;
+    padding: 0 .8rem;
+    border: 1px solid #ea3534;
+    line-height: 2rem;
+    color: #ea3534;
+    font-size: 1rem;
+}
+
+.order-pay-charge {
+    position: absolute;
+    top: .4rem;
+    right: 2rem;
+    display: inline-block;
+    height: 2rem;
+    /*margin-top: -1rem;*/
+    padding: 0 .8rem;
+    line-height: 2rem;
+    color: #ea3534;
+    font-size: 1rem;
+}
+
+.order-pay-text {
+    position: absolute;
+    top: 50%;
+    right: 3rem;
+    display: inline-block;
+    height: 2rem;
+    margin-top: -1rem;
+    padding: 0 .8rem;
+    border: 1px solid #ea3534;
+    line-height: 2rem;
+    color: grey;
+    font-size: 1rem;
+}
+
+.pay-card-no {
+    border: 0;
+    right: 1rem;
+}
+
+/*设置支付密码*/
+.set-payment-pw > li {
+    border-bottom: 1px solid #ddd;
+}
+
+.set-payment-pw > li label {
+    width: 8rem;
+}
+
+.set-payment-pw > li .form-control {
+    padding-left: 8rem;
+}
+
+.set-payment-pw > li span.form-control {
+    line-height: 1.8rem;
+}
+
+.text-blue {
+    color: #0362bf;
+}
+
+.card-default {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: 2rem;
+    line-height: 2rem;
+    margin-top: -1rem;
+    font-size: 1rem;
+    color: #0362bf;
+}
+
+.active {
+    color: #fc3635;
+}
+
+.use-balance {
+    padding-left: 1.8rem;
+    background: url("../img/m-icon-radio01.png") no-repeat 0 50%;
+    background-size: 1.2rem auto;
+}
+
+.use-balance.active {
+    background-image: url("../img/m-icon-radio02.png");
+}
+
+.use-balance-pw {
+    margin: 0 -1.5rem;
+    padding: 2rem 2rem 1.5rem;
+    border-bottom: 1px solid #d6d6d6;
+    text-align: center;
+}
+
+.use-balance-pw input {
+    width: 100%;
+    padding: 0;
+    height: 3rem;
+    border: 1px solid #999;
+    border-radius: .1rem;
+    text-align: center;
+}
+
+/*汇油涨*/
+#i_oil_up a img {
+    width: 100%;
+    height: auto
+}
+
+#i_oil_up a .left-pro-desc {
+    left: 0;
+    top: 0;
+    right: 0;
+    padding-left: 1rem;
+}
+
+#i_oil_up a .left-pro-desc .text1 {
+    line-height: 1.5em;
+    color: rgba(255, 255, 255, .5)
+}
+
+#i_oil_up a .left-pro-desc .text2 {
+    line-height: .8em;
+}
+
+#i_oil_up a .left-pro-desc .text3 {
+    color: rgba(255, 255, 255, .7)
+}
+
+.btn-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-wrapper > a {
+    -webkit-flex: 0 0 auto;
+    -moz-flex: 0 0 auto;
+    -o-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    text-align: center;
+    padding: 0.8rem 2.6rem;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 0.3rem;
+}
+
+.btn-wrapper > .btn-left {
+    background-color: #fc3635;
+}
+
+.btn-wrapper > .btn-right {
+    background-color: #feac36;
+}
+
+/**加息券**/
+.storage-card .jx-tips {
+    position: absolute;
+    right: -2.5rem;
+    top: 0.75rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    padding: 0 2.5rem;
+    background: rgba(255, 251, 240, .8);
+    font-size: 1rem;
+    color: #ff6908;
+    transform: rotate(45deg);
+}

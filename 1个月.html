@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="ML-Config" content="fullscreen=yes,preventMove=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>光汇储油卡（3.7生产测试）-1个月</title>
+    <link href="./file/dialog.css" rel="stylesheet" media="screen, projection">
+	<link href="./file/global-mobile.css" rel="stylesheet" media="screen, projection">
+	<link href="./file/layout-mobile.css" rel="stylesheet" media="screen, projection">
+	<link href="./file/new-index.css" rel="stylesheet" media="screen, projection"> 
+    
+	<script>
+        var cssEl = document.createElement('style');
+        document.documentElement.firstElementChild.appendChild(cssEl);
+        function setPxPerRem() {
+            var dpr = 1;
+            var pxPerRem = document.documentElement.clientWidth * dpr / 32;
+            if (pxPerRem < 10) pxPerRem = 10;
+            if (pxPerRem > 20) pxPerRem = 20;
+            cssEl.innerHTML = 'html{font-size:' + pxPerRem + 'px!important;}';
+        }
+        setPxPerRem();
+    </script><style>html{font-size:12.9375px!important;}</style>
+    
+    <!-- 百度统计文件 start -->
+        <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?a0fa59d0b0e118d6caf2bad0ce13ba58";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+
+</script>
+
+<!-- <script src="https://demoapi.brightoilonline.com/c2bappapi/v5.0/log/js/brower.js"></script>
+<script src="https://demoapi.brightoilonline.com/c2bappapi/v5.0/log/js/Env_m.js"></script>
+<script src="https://demoapi.brightoilonline.com/c2bappapi/v5.0/log/js/bw_tj.js"></script> -->
+<script src="./file/brower.js"></script>
+<script src="./file/Env_m.js"></script>
+<script src="./file/bw_tj.js"></script>
+<script src="./file/JSON.js"></script>
+
+</head>
+<body>
+    <div class="container pb-60">
+        <div class="row text-center taste-title cblack">
+            <a class="btn-back-go " href="javascript:history.go(-1)"><i class="btn-back"></i></a>光汇储油卡（3.7生产测试）-1个月        </div>
+
+        <div class="oil-bao storage-card relative row">
+            <div class="text-center cwhite">
+                                <div class="fs-30 pt-25"><span class="relative">5.5<span class="fs-20">% +100%</span></span></div>
+                <div class="fs-12 mt-5">赠送比例 + 上涨红利<i class="relative iconfont icon-wenhao text-white" style="top: 0.1rem;" id="floatP"></i></div>
+                            </div>
+            <div class="oil-bao-desc overhide text-center">
+                <div class="col-xs-6 pl-0 pr-0">期限 1个月</div>
+                <div class="col-xs-6 pl-0 pr-0">起购金额 1000元</div>
+            </div>
+        </div>
+
+        <div class="row pl-15 pr-15  pt-10 pb-10 bg-white overhide fs-12 border-bottom-line">
+            <div class="col-xs-6 pl-0 pr-0 text-black">参考油价 <i class="relative iconfont icon-wenhao" id="oilMess"></i></div>
+            <div class="col-xs-6 pl-0 pr-0 text-right">6.55元/升</div>
+        </div>
+
+        <div class="row pl-15 pr-15  pt-10 pb-10 bg-white overhide fs-12 border-bottom-line">
+            <div class="col-xs-6 pl-0 pr-0 text-black">兑付服务费 <i class="relative iconfont icon-wenhao" id="cashsMess"></i></div>
+            <div class="col-xs-6 pl-0 pr-0 text-right">
+            兑付金额的<i class="text-danger">5%</i>
+                        </div>
+        </div>
+
+        <div class="oil-card-main">
+            <ul class="list-g list-normal">
+                <li class="border-bottom-line">
+                    <dl class="pl-15 pr-15">
+                        <dt class="text-black fs-12">购买金额</dt>
+                        <dd class="text-grey fs-10">1000元起购，1000元递增，每单限购100000元</dd>
+                    </dl>
+                    <dl class="li-innner new-pro-li">
+                        <dt class="fs-24">¥</dt>
+                        <dd>
+                            <div class="buy-num relative text-center" id="cartCounter">
+                                <input type="text" class="text-danger" id="buyAmount" maxlength="6" placeholder="请输入1000~100000，1000的整数倍">
+                            </div>
+                        </dd>
+                    </dl>
+                </li>
+                                <li class="pl-15 pr-15 fs-10 text-darkgrey">购买油量：<span class="text-danger" id="litre_num">0.31</span>升，赠送油量：<span class="text-danger" id="give_litre_num">0.02</span>升，合计：<span class="text-danger" id="total_litre_num">0.33</span>升，当前价值：<span class="text-danger" id="card_value">2.11</span>元</li>
+                               </ul>
+            <div class="text-right text-gray fs-10 mr-15 mt-3">风险提示：油价波动会影响您的上涨红利</div>
+
+            <ul class="list-g list-arrow-v mt-10">
+                <!-- <li>
+                    <dl class="li-innner border-bottom-line">
+                        <dt>使用现金券</dt>
+                        <dd class="text-danger">30元现金红包</dd>
+                    </dl>
+                    <i class="arrow iconfont absolute icon-chevron-copy-copy-copy-copy-copy-copy"></i>
+                </li> -->
+                <li class="" id="useVoucher">
+	                <dl class="li-innner border-bottom-line ">
+	                    <dt>使用现金券</dt>
+	                    <dd>
+	                        	                         <a id="m_product_cashcoupon" href="https://demom.brightoilonline.com/index.php/wap/weixinproduct-couponList.html?productId=34719&amp;amount=2&amp;cpns_id=&amp;qty=1&amp;ratecpn_id=&amp;cashLimit=1"><span id="cash-quan" data-cpnids="" class="text-danger text-right bg-white">无可用现金券</span></a>
+	                        	                    </dd>
+	                </dl>
+	                                 </li>
+            </ul>
+
+            <!-- <ul class="list-g list-arrow-v margin-bottom mt-10">
+                <li>
+                    <dl class="li-innner">
+                        <dt>
+                            获赠油箱抵扣
+                            <span class="info-tips" id="info-tips">当前订单可用<span class="cred">2.85升</span>，抵<span class="cred">18.18元</span><i class="iconfont icon-tanhao info-tips-ico fs-13"></i></span>
+                        </dt>
+                        <dd></dd>
+                    </dl>
+                    <div class="li-content border-top fs-13">
+                        <p class="cgray mb-0 fs-10">获赠油箱现有3升油,价值18.81元</p>
+                    </div>
+                    <i class="list-switch s-close" id="oilDeductible" data-val="0">
+                        <div class="dot"></div>
+                        <input type="checkbox" class="hide">
+                    </i>
+                </li>
+            </ul> -->
+                    </div>
+        <div class="pro-detail" style="display: none;">
+            <ul class="list-unstyled row bg-white border-bottom-line pro-detail-tag">
+                <li class="active"><span>产品详情</span></li>
+                <li><span>使用案例</span></li>
+                <li><span>关于光汇</span></li>
+            </ul>
+
+            <!-- 点击返回顶部 s-->
+            <div class="click-top" href="#" style="display: none;">
+                <div class="click-show-more iconfont"><span>点击返回顶部</span></div>
+                <i class="iconfont icon-chevron-copy fs-14"></i>
+            </div>
+            <!-- 点击返回顶部 e-->
+
+            <div class="pro-detail-cons">
+                <!-- 产品详情 s -->
+                <div>
+                    <!-- 收益说明 s -->
+                                        <div class="row mb-10 p-15 bg-white">
+                        <h5 class="relative i-list-title2 mb-15 text-black"><b>收益说明</b></h5>
+                        <p style="font-size:13px">光汇储油产品，超高赠送比例，到期后可随时根据当前油价一次性兑付，同时还享有油价上涨的100%红利。</p>                    </div>
+                                        <!-- 收益说明 e -->
+
+                    <!-- 兑付说明 s -->
+                    <div class="row mb-10 p-15 bg-white">
+                        <h5 class="relative i-list-title2 mb-15 text-black"><b>兑付说明</b></h5>
+                        <div class="row fs-11 bg-white margin-bottom">
+                                                        <div>
+                              <div class="duifu-box mt-15 mb-15">
+                                  <div class="node stage1"></div>
+                                  <div class="node stage2"></div>
+                                  <div class="node stage3"></div>
+                              </div>
+                              <div class="clear text-center pb-10">
+                                  <div class="left text-left">
+                                      <div>2018-03-20</div>
+                                      <div>购买成功</div>
+                                  </div>
+                                  <div class="right text-right">
+                                      <div>后续可<br>随时兑付</div>
+                                  </div>
+                                  <div>
+                                      <div>2018-04-20</div>
+                                      <div>到期开放兑付</div>
+                                  </div>
+                              </div>
+                              <div class="border-top pt-5 pb-5">稳健的固定收益产品</div>
+                            </div>
+                                                    </div>
+                        <div class="mt-5 fs-12 text-darkgrey">注：此为起购金额对应的每期可兑付数量说明</div>
+                    </div>
+                    <!-- 兑付说明 e -->
+
+                    <!-- 交易规则 s -->
+                    <div class="row mb-10 p-15 bg-white">
+                        <h5 class="relative i-list-title2 mb-15 text-black"><b>交易规则</b></h5>
+                        <p style="color:#666; font-size:13px; font-family: Arial;"> 1、光汇储油卡是光汇云油推出的线上碎片化储油服务产品，用户在线上购买储油卡时享有超高赠送比例，赠送的油也可进行消费或折算金额兑现；<br><br> 2、根据不同的储油期限，享有最高24%的超高赠送比例，同时还享有油价上涨的100%红利，到期后可根据当前参考油价自行选择是否一次性兑付；<br><br> 3、产品购买成功不支持退款，持有期内不能提前消费或兑现，到期后可随时进行消费或按当前油价折算成金额兑现；<br><br> 4、该产品销售策略为每天限时限量，当天售完即止，在平台总体额度内每个账户购买次数不限；<br><br> 5、到期后如需折算成金额兑现，将根据当前油价进行折算，如当前油价高于购买油卡时的油价，您可享有油价上涨的100%红利，如当前油价低于购买油卡时的油价，会影响到你的上涨红利，建议继续持有待油价上涨后再进行兑现，最终解释权归光汇云油所有；<br><br> 6、根据公司政策，本产品到期后如需折算成金额兑现，平台将会收取兑付金额的5%作为兑付服务费。</p>                    </div>
+                    <!-- 交易规则 e -->
+
+                    <!-- 资金安全 s -->
+                    <div class="row mb-10 p-15 bg-white">
+                        <ul class="list-g list-arrow-v margin-bottom">
+                            <li>
+                                <dl class="li-innner">
+                                    <dt class="relative i-list-title2 text-black bold">资金安全</dt>
+                                    <dd>
+                                        <span class="border-item">工商银行托管</span>
+                                        <span class="border-item">易安保险保障</span>
+                                    </dd>
+                                </dl>
+                                <div class="li-content fs-11">
+                                    <div class="cred" id="insurance_title"><span style="color: rgb(255, 0, 0); font-family: 微软雅黑; widows: 1;"><font size="2">工商银行资金存管，人保，易安保险保障账户资金安全。</font></span><p style="margin: 0px; text-rendering: optimizeLegibility; font-feature-settings: &#39;kern&#39; 1; font-kerning: normal; color: rgb(51, 51, 51); font-family: 微软雅黑; line-height: normal; widows: 1;"><span style="color: rgb(255, 0, 0);"><font size="2"><br></font></span></p>
+ <p style="text-align: left; widows: 2; margin: 0px; text-rendering: optimizeLegibility; font-feature-settings: &#39;kern&#39; 1; font-kerning: normal; line-height: normal;"><font size="2"><span style="color: rgb(30, 30, 30); font-family: 微软雅黑;">您只要再购买价值</span><font color="#ff0000" style=""><span style="font-family: 微软雅黑;">&nbsp;</span><span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Tahoma, Arial, sans-serif; white-space: nowrap; widows: 2;">15000.00</span><span style="font-family: 微软雅黑;">元&nbsp;</span></font><span style="color: rgb(30, 30, 30); font-family: 微软雅黑;">的光汇云油产品，光</span><span style="color: rgb(30, 30, 30); font-family: 微软雅黑;">汇云油将为您购买保额为1</span><span style="color: rgb(34, 34, 34); font-family: &quot;Helvetica Neue&quot;, Helvetica, Tahoma, Arial, sans-serif; white-space: nowrap;">0000</span><span style="color: rgb(30, 30, 30); font-family: 微软雅黑;">元起的光汇云油账户资金</span><span style="color: rgb(30, 30, 30); font-family: 微软雅黑;">安全险。</span></font></p>
+ <p style="text-align: left; widows: 2; margin: 0px; text-rendering: optimizeLegibility; font-feature-settings: &#39;kern&#39; 1; font-kerning: normal; line-height: normal;"><font style="color: rgb(51, 51, 51); font-family: 微软雅黑; widows: 1;" size="2"><span style="color: rgb(102, 102, 102);"><br></span></font></p>
+ <p style="text-align: left; widows: 2; margin: 0px; text-rendering: optimizeLegibility; font-feature-settings: &#39;kern&#39; 1; font-kerning: normal; line-height: normal;"><font size="2"><font style="color: rgb(51, 51, 51); font-family: 微软雅黑; widows: 1;"><span style="color: rgb(102, 102, 102);">光汇云油平台账户资金安全险，是易安保险专门为光汇</span></font><span style="font-family: 微软雅黑; widows: 1; color: rgb(102, 102, 102);">云油平台打造的专属产品，为您的账户资金安全提供全</span><span style="font-family: 微软雅黑; widows: 1; color: rgb(102, 102, 102);">面保障。目前光汇云油平台为所有储油资产金额超过</span><span style="color: rgb(34, 34, 34); font-family: &quot;Helvetica Neue&quot;, Helvetica, Tahoma, Arial, sans-serif; white-space: nowrap;">15000</span><span style="font-family: 微软雅黑; widows: 1; color: rgb(102, 102, 102);">元的用户购买额度合理的账户资金安全</span><span style="font-family: 微软雅黑; widows: 1; color: rgb(102, 102, 102);">险，按月根据资产余额情况确定是否购买或者购买更高</span><span style="font-family: 微软雅黑; widows: 1; color: rgb(102, 102, 102);">额度的保险，安全险最早于在您储油资产达到</span><span style="color: rgb(34, 34, 34); font-family: &quot;Helvetica Neue&quot;, Helvetica, Tahoma, Arial, sans-serif; white-space: nowrap;">15000</span><span style="font-family: 微软雅黑; widows: 1; color: rgb(102, 102, 102);">元后的第3个工作日零时生效。保险生</span><span style="font-family: 微软雅黑; widows: 1; color: rgb(102, 102, 102);">效后，您可以在我的账户页面查看到您的保单，或者在</span><span style="font-family: 微软雅黑; widows: 1; color: rgb(102, 102, 102);">易安保险官网/热线电话/微信公众号凭保单、姓名、身</span><span style="font-family: 微软雅黑; widows: 1; color: rgb(102, 102, 102);">份证号核实保单真伪。</span></font></p></div>
+                                                                    </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 资金安全 e -->
+                </div>
+                <!-- 产品详情 e -->
+
+                <!-- 储油卡使用案例 s -->
+                <div style="display: none">
+                    <div class="row mb-10 p-15 bg-white">
+                        光汇储油产品，最低起购金额1000元，按1000元递增，每单最多可购买10万元，根据您购买的储油卡不同期数平台再赠送最高24%的赠送金额，与购买时的参考油价折算成储油升数，储油总油量将在到期后一次性进行加油消费或折算成金额兑现。
+
+如以三个月期限产品为例，您今天购买了10000元油卡，平台赠送700元，即您一共持有10700元。如当前参考油价为6元/升，即相当于您购买了1783.33升油（四舍五入），三个月到期后如此时参考油价涨到7元/升，你相当于另外获得1783.33元上涨红利，即一共可兑付12483.33元，扣除5%的服务费后实际到账11859.16元；如此时参考油价跌到5.8元/升，您相当于损失356.67元上涨红利，此时建议您继续持有待油价上涨后再折算金额兑现。                    </div>
+                </div>
+                <!-- 储油卡使用案例 e -->
+
+                <!-- 关于光汇 s -->
+                <div style="display: none">
+                    <div class="row mb-10 p-15 bg-white">
+                        <img style="width:100%;" src="./file/f42b06ae3f14e689ca8ec64baaed99dfea327492.jpg"> 
+<img style="width:100%;" src="./file/9b12e65bfadc342f31ffb5546dda499889b382e9.jpg">                    </div>
+                </div>
+                <!-- 关于光汇 e -->
+            </div>
+        </div>
+
+        <p class="mt-10 text-center fs-10 text-grey new-vip-bx"><img app="wap" src="./file/icon02-dun.png">人保、易安、阳光保险与工商银行保障您的资金安全</p>
+
+        <!-- 点击展示更多 s-->
+        <div class="click-show">
+            <i class="iconfont icon-chevron-copy fs-14"></i>
+            <div class="click-show-more iconfont"><span>点击显示更多</span></div>
+        </div>
+        <!-- 点击展示更多 e-->
+    </div>
+
+    <!-- 底部固定按钮 -->
+    <div class="fixed bottom-bar text-right bg-white fixedBar">
+        <a href="https://demom.brightoilonline.com/index.php/wap/weixinindex.html" class="back-home"><i class="iconfont icon-home1 fs-18"></i>首页</a>
+        <!-- 如果禁止点击，需要给input加class：disabled，同时还有属性disabled -->
+        <input type="button" class="buy-now text-center absolute fs-15 buyNow" value="立即购买" id="product_saveoilcard_buy_btn">
+        <div class="fs-15">实付: <span class="text-danger" id="totalPriceValue">2.00 元</span></div>
+        <div class="fs-11 text-danger">优惠：<span id="discount">0.00</span> 元</div>
+    </div>
+<script src="./file/jquery-1.11.3.min.js"></script>
+<script src="./file/bOilPlugIn.js"></script>
+<script src="./file/dialog.js"></script>
+<script src="./file/mobile-select-area.js"></script>
+<script>
+    var bOilApp = new bOilPlugIn(), App = {
+        //是否后端开发状态(0前端，1后端)
+        status: 1,
+        profitTplData : {"type_bn":"fixed_litre_up_v1","price":"6.5500","giftpercent":"5.5","discountRate":null,"cashperiods":1},
+        cpns_id : "",
+        productId : '34719',      //产品id
+        cashLimit : '1', // 期限
+        totalCpnMoney : 0, // 现金券
+        maxNum : parseInt('99'),
+        goil_money: 0.00,
+        numFlag:true,
+        canSubmit:true,
+        oil_callback:function(){
+            var name = $("#oilType").val();
+            console.log(name);
+            //获得价格并将值替换到#oilPrice
+            $("#oilPrice").html(6- -Math.random().toFixed(2))
+        },
+        is_weixin:function () {
+            var ua = window.navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+                $(".taste-title").hide();
+            } else {
+                $(".taste-title").show();
+            }
+        },
+        outputdollars : function(number) {
+            number = number.toFixed(2);
+            value = (number+'').replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+            return value;
+        },
+        calCashNum : function() {
+            var _this = this;
+            var cashperiods = _this.profitTplData.cashperiods;
+            var buyAmount = $("#buyAmount").val();
+            if(cashperiods > 1){
+                var litre_num = _this.fCeil(buyAmount/_this.profitTplData.price,2);
+                var month_cash = Math.floor(litre_num/_this.profitTplData.cashperiods);
+                var last_month_cash = (litre_num - month_cash*(cashperiods - 1)).toFixed(2);
+                $(".cash_limit_month").each(function(i){
+                   if(i == (cashperiods - 1)){
+                       $(this).html(last_month_cash);
+                   }else{
+                       $(this).html(month_cash);
+                   }
+                });
+            }
+        },
+        calcTotalPrice : function() {
+            var _this = this;
+            if(parseInt(_this.maxNum) == 0){
+                $(".buyNow").val("已售罄");
+                $('#totalPriceValue').html('0.00 元');
+                $('#discount').html('0.00');
+                _this.submitStatus('off');
+                return;
+            }else{
+                $(".buyNow").val("立即购买");
+            }
+            var qty = 1;
+            totalPrice = $("#buyAmount").val();
+            var discount_amount = Math.abs(parseFloat($("#discount_amount").html()));
+            var discount = 0;
+            if(discount_amount > 0){
+                discount += discount_amount
+                totalPrice -= discount_amount;
+            }
+            discount +=  _this.totalCpnMoney;
+            if($('.oilDeductible').hasClass('s-open')) {    // 油箱抵扣
+                var goilMoney = parseFloat($('#goil_moneyValue').attr('data-value'));
+                totalPrice -= goilMoney;
+                discount += goilMoney;
+            }
+            totalPrice -= _this.totalCpnMoney;
+            if(totalPrice < 0){
+                totalPrice = 0;
+            }
+            totalPrice = _this.outputdollars(parseFloat(totalPrice));
+            discount =  _this.outputdollars(parseFloat(discount));
+
+            if(parseFloat(totalPrice) > 0){
+                _this.submitStatus('on');
+            }else{
+                _this.submitStatus('off');
+            }
+
+            $('#totalPriceValue').html(totalPrice+' 元');
+            $('#discount').html(discount);
+        },
+        profitTpl : function(){
+            var _this = this;
+            var buyAmount = $("#buyAmount").val();
+            var html = '';
+            var tPlTitle='';
+
+            if(_this.profitTplData.type_bn == 'fixed_litre_up_v1' || _this.profitTplData.type_bn == 'fixed_litre_exper_v1'){
+                var litre_num = _this.fCeil(buyAmount/_this.profitTplData.price, 2);
+                var total_litre_num = _this.fCeil(buyAmount *(1+ this.profitTplData.giftpercent/100) / _this.profitTplData.price, 2);
+                var give_litre_num = (total_litre_num - litre_num).toFixed(2);
+                var card_value = (buyAmount * (1 + this.profitTplData.giftpercent/100)).toFixed(2);
+                $("#litre_num").html(litre_num);
+                $("#give_litre_num").html(give_litre_num);
+                $("#total_litre_num").html(total_litre_num);
+                $("#card_value").html(card_value);
+            }else if(_this.profitTplData.type_bn == 'amount_refuel_nation_v1'){
+                var discount_amount = (buyAmount - buyAmount * _this.profitTplData.discountRate / 10).toFixed(2);
+                var litre_num = _this.fCeil(buyAmount/_this.profitTplData.price, 2);
+                var cash_litre_month = (litre_num / _this.profitTplData.cashperiods).toFixed(0);
+                $("#discount_amount").html('-'+discount_amount);
+                $("#litre_num").html(litre_num);
+                if(_this.profitTplData.cashperiods == 1){
+                    $("#cash_litre_month").html(litre_num);
+                }else{
+                    $("#cash_litre_month").html(Math.floor(litre_num/_this.profitTplData.cashperiods));
+                }
+            }
+        },
+        changeNum : function(callBack){
+            var _this = this;
+            var qty = 1;
+            if(qty == 0){
+                return;
+            }
+            var amount = $("#buyAmount").val();
+            if( amount == '' ){
+                return;
+            }
+            if($('.oilDeductible').hasClass('s-open')) {
+                amount -= parseFloat($('.goil_moneyValue').attr('data-value'));
+            }
+            var data = {'productId':_this.productId, 'amount':amount, 'qty':qty, 'cashLimit':_this.cashLimit};
+            //bOilApp.alertMsg("", null, 'loading', 'noClear');   // loading
+            $.ajax({
+                url: "/index.php/wap/weixinproduct-ajaxCoupon.html",
+                dataType: 'json',
+                data: data,
+                type: 'get',
+                success: function (result) {
+                    bOilApp.clearAlertMsg();
+                    if(result.status){
+                        var cpnsMoney = '未使用';
+                        if(result.cpnsId) {
+                            cpnsMoney = '-￥'+_this.outputdollars(parseFloat(result.cpnsMoney));
+                            $("#useVoucher").removeClass('hide');
+                        }
+                        if(result.minCnpTip.isBool && !result.cpnsId) {
+                            cpnsMoney = result.minCnpTip.tipC;
+                            $("#useVoucher").removeClass('hide');
+                        }
+                        if(!result.cpnsMoney && !result.minCnpTip.isBool ) {
+                            result.cpnsMoney = 0;
+                            $("#useVoucher").addClass('hide');
+                        }
+                        _this.totalCpnMoney = parseFloat(result.cpnsMoney);
+
+                        if(result.giveInfo.give_num > 0) {
+                        //  $('.give_num').html(result.giveInfo.give_num+result.giveInfo.cash_unit);
+                        //  $('#give_price').html('￥'+result.giveInfo.give_price+'元');
+                        }
+                        $('#goil_moneyValue').html(result.goilMoney+'元').attr('data-value', result.goilMoney);
+
+                        $('#goil_litre').html(result.goil_litre+'L');
+                        //$('#moneyValue').html(result.goilMoney+'元');
+
+                        totalCpnMoney = parseFloat(result.cpnsMoney);
+                        $('#cash-quan').attr('data-cpnids', result.cpnsId).html(cpnsMoney);
+                        $('#cash-quan').parents('a').attr('href', '/index.php/wap/weixinproduct-couponList.html'+'?productId='+_this.productId+'&amount='+amount+'&cpns_id='+result.cpnsId+'&qty='+qty + '&cashLimit='+_this.cashLimit);
+
+                        goilMoney = parseFloat(result.goilMoney);
+                        if(goilMoney > 0){
+                            var html = '当前订单可用<span class="cred" id="goil_litre">'+result.goil_litre+'L</span>，抵<span class="cred goil_moneyValue" id="goil_moneyValue" data-value="'+result.goilMoney+'">'+result.goilMoney+'元</span>';
+                            $('#oilShow').removeClass('hide');
+
+                        }else{
+                            var html = '暂无可抵扣金额';
+                        }
+                        _this.goil_money = goilMoney;
+                        $("#goil_tip").html(html);
+
+                    }else{
+                        $('#cash-quan').parents('a').attr('href', '/index.php/wap/weixinproduct-couponList.html'+'?productId='+_this.productId+'&amount='+amount+'&cpns_id=&qty='+qty + '&ratecpn_id='+ '&cashLimit='+_this.cashLimit );
+                      /*  */
+                    }
+
+                    $("#insurance_title").html(result.insuranceDetail.title);
+                    var html = '<label class="cblack">'+'<input type="checkbox" checked="" disabled="">'+result.insuranceDetail.content+' </label>';
+                    $("#insurance_content").html(html);
+                     _this.numFlag = true;
+                    if(callBack) {
+                        callBack(result);
+                    }
+
+                },
+                error:function(){
+                    _this.numFlag = true;
+                }
+            });
+        },
+        createOrder : function(){
+            var _this = this;
+            var qty = 1;
+            var totalPrices = $("#buyAmount").val();
+            if(totalPrices == '' || parseInt(totalPrices) <= 0){
+                bOilApp.alertMsg("请输入购买金额");
+                return;
+            }
+            if(!_this.canSubmit){
+                _this.canSubmit = true;
+                return;
+            }
+            var data = {'product_id':_this.productId, 'qty':qty, 'csrf_token':'', 'goil_money':0, 'cashcoupons':$('#cash-quan').attr('data-cpnids'), 'totalPriceValue':totalPrices,'cashLimit':_this.cashLimit};
+            if($('.oilDeductible').hasClass('s-open')){
+                data.goil_money =  parseFloat($('.goil_moneyValue').attr('data-value'));
+            }
+            bOilApp.alertMsg("", null, 'loading', 'noClear');   // loading
+            $('.buyNow').addClass('disabled');
+            $.ajax({
+                url: "/index.php/wap/weixinproductlist-createOrder.html",
+                dataType: 'json',
+                data: data,
+                type: 'post',
+                success: function (result) {
+                    setTimeout(function(){
+                    bOilApp.clearAlertMsg();
+                    $('.buyNow').removeClass('disabled');
+                    if(result.error) {
+                            bOilApp.alertMsg(result.error);
+                            if(result.redirect){
+                               setTimeout(function () {
+                                location = result.redirect;
+                               }, 1000);
+                            }
+                        } else if (result.alert) {
+                            bOilApp.tips({
+                                title: '提示',
+                                closeId: 'tipsCloseBtn',
+                                btnNums: 2,
+                                content: result.alert,
+                                btn: {
+                                    btnSure: {
+                                        text: '确定',
+                                        href: 'javascript:void(0);',
+                                        fun: function () {
+                                            location = result.redirect;
+                                        }
+                                    },
+                                    btnCancle: {
+                                        text: '取消',
+                                        href: 'javascript:void(0);',
+                                        fun: function () {
+                                            return false;
+                                        }
+                                    }
+                                }
+                            });
+                            return false;
+                        }else {
+                            if(result.redirect) {
+                                location = result.redirect;
+                            }
+                        }
+                    },1000)
+                }
+            });
+        },
+        loadData: function(){
+            var basePrice = "1000";
+            var buy_num_min = 1000;
+            var buy_num_max = 100000;
+            var cartNum = parseInt($("#buyAmount").val());
+            if((cartNum-buy_num_min)%basePrice !== 0 && cartNum > buy_num_min){
+                bOilApp.alertMsg('请按'+basePrice+'的整数倍递增');
+                cartNum = parseInt(cartNum/basePrice)*basePrice+buy_num_min;
+                if(cartNum===0){
+                    cartNum = buy_num_min;
+                }else if(cartNum>buy_num_max){//此处张数按后台控制的来
+                    cartNum = buy_num_max
+                }
+                $(this).val(cartNum);
+            }
+            if(cartNum > buy_num_max){
+                cartNum = buy_num_max;
+                $(this).val(cartNum);
+            }
+            if(cartNum < buy_num_min){
+                cartNum = buy_num_min;
+                $(this).val(cartNum);
+            }
+            if(cartNum != ''){
+			    App.profitTpl();
+                   App.calcTotalPrice();
+               /* App.changeNum(function(result) {
+                   App.profitTpl();
+                   App.calcTotalPrice();
+               }); */
+            }
+        },
+        fCeil: function(value, pressision = 2){
+            var p = Math.pow(10, pressision);
+            value = value*p;
+            value += '';
+            if(value.indexOf('.0') > 0 ){
+                value = Math.floor(value);
+            }else{
+                value = Math.ceil(value);
+            }
+            return value / p;
+        },
+        init: function() {
+            var _this = this;
+            _this.is_weixin();
+            _this.submitStatus('on');
+            //页面底部固定按钮
+            bOilApp.fixedBtn('#fixedBar');
+            if(parseInt($("#buyAmount").val()) > 0){
+                App.loadData();
+            }
+            //计数器
+            $("#cartCounter .buy-minus").on('click',function(){
+                var basePrice = 100;
+                var $this = $(this);
+                var cartNum = $this.siblings('input').val();
+                var reg = /^[0-9]{1}$|^[1-9][0-9]*$/g;
+                if(!reg.test(cartNum)){
+                    cartNum = basePrice;
+                    $this.siblings('input').val(cartNum);
+                }
+                cartNum = parseInt(cartNum/basePrice);
+                cartNum--;
+                if(cartNum <= 0){
+                    cartNum = 1
+                }
+                $this.siblings('input').val(cartNum*basePrice);
+            });
+
+            $("#cartCounter .buy-add").on('click',function(){
+                var basePrice = 100;
+                var $this = $(this);
+                var cartNum = $this.siblings('input').val();
+                var reg = /^[0-9]{1}$|^[1-9][0-9]*$/g;
+                if(!reg.test(cartNum)){
+                    cartNum = basePrice;
+                    $this.siblings('input').val(cartNum);
+                }
+                cartNum = parseInt(cartNum/basePrice);
+                cartNum++;
+                if(cartNum>=100){
+                    bOilApp.alertMsg('已超过最大购买数量');
+                    cartNum=99
+                }
+                _this.submitStatus('on');
+                $this.siblings('input').val(cartNum*basePrice);
+            });
+
+            $('#cartCounter input').on('blur',function(){
+                _this.canSubmit = true;
+                $(this).val($(this).val().replace(/[^0-9]/g,''));
+                var basePrice = "1000";
+                var buy_num_min = 1000;
+                var buy_num_max = 100000;
+                var cartNum = parseInt($(this).val());
+                if((cartNum-buy_num_min)%basePrice !== 0 && cartNum > buy_num_min){
+                    bOilApp.alertMsg('请按'+basePrice+'的整数倍递增');
+                    _this.canSubmit = false;
+                    cartNum = parseInt(cartNum/basePrice)*basePrice + buy_num_min;
+                    if(cartNum===0){
+                        cartNum = buy_num_min;
+                    }else if(cartNum>buy_num_max){//此处张数按后台控制的来
+                        cartNum = buy_num_max
+                    }
+                    $(this).val(cartNum);
+                }
+                if(cartNum > buy_num_max){
+                    cartNum = buy_num_max;
+                    $(this).val(cartNum);
+                    _this.canSubmit = false;
+                }
+                if(cartNum < buy_num_min){
+                    cartNum = buy_num_min;
+                    $(this).val(cartNum);
+                    _this.canSubmit = false;
+                }
+                if(cartNum != ''){
+                  /*  _this.changeNum(function(result) {
+                        _this.profitTpl();
+                        _this.calcTotalPrice();
+                        //_this.calCashNum();
+                    });*/
+                }
+            });
+
+            $('#cartCounter input').on('input',function(){
+                $(this).val($(this).val().replace(/[^0-9]/g,''));
+				   _this.profitTpl();
+                    _this.calcTotalPrice();
+             /*   _this.changeNum(function(result) {
+				debugger;
+                    _this.profitTpl();
+                    _this.calcTotalPrice();
+                   // _this.calCashNum();
+                });*/
+            });
+            //点击问号提示信息
+            var closeTip = $('.wh-tips i.icon-no');
+            $('.i-wh').on('click', function(){
+                $(this).parent().next('.wh-tips').slideDown(100);
+            });
+            closeTip.on('click', function(){
+                $('.wh-tips').slideUp(100);
+            });
+
+            //开关
+            $("#oilDeductible").on('click',function(){
+                var oilDeductibleValue = $(this).attr('data-val');
+                if(oilDeductibleValue === '1'){
+                    $(this).addClass('s-close').removeClass('s-open');
+                    $(this).attr('data-val','0');
+                    _this.calcTotalPrice();
+                }else{
+                  //判断车主是否认证  已认证 判断是否有油  没有不可以开启
+                                          if(_this.goil_money > 0){
+                            var totalPrice = $("#buyAmount").val();
+                            if(totalPrice == '' || parseInt(totalPrice) <= 0){
+                                bOilApp.alertMsg("请输入购买金额");
+                                return;
+                            }
+                            $(this).addClass('s-open').removeClass('s-close');
+                             $(this).attr('data-val','1');
+                             _this.calcTotalPrice();
+                        }
+                                    }
+            });
+
+            //收缩展开示例
+            $("#sample,#tradingRules").on('click',function(){
+                var liContent = $(this).siblings('.li-content');
+                var arrow = $(this).siblings('.arrow');
+                if(liContent.css('display') === 'none'){
+                    liContent.slideDown(100);
+                    arrow.removeClass('down').addClass('up')
+                }else{
+                    liContent.slideUp(100);
+                    arrow.removeClass('up').addClass('down')
+                }
+            });
+            $(".buyNow").on('click',function(){
+                if($(this).hasClass("disabled")){
+                    return;
+                }
+             //   _this.createOrder();
+            });
+            //点击tip弹窗
+            $("#floatP").on('click',function(){
+                var type_bn  = "fixed_litre_up_v1";
+                var tips = "";
+                if(type_bn == 'amount_refuel_nation_v1'){
+                    tips = "购买油卡享受折优惠，同时还可以享受油价上涨的100%的涨幅收益，享有折扣+油价上涨100%双重收益；";
+                }else{
+                    tips = "购买油卡赠送5.5%油量，同时还可以享受油价上涨的100%的涨幅收益，享有赠送+油价上涨100%双重收益；";
+                }
+                bOilApp.tips({
+                    title: '提示',
+                    closeId: 'tipsCloseBtn',
+                    btnNums: 1,
+                    content: tips,
+                    btn: {
+                        btnSure: {
+                            text: '我知道了',
+                            href: 'javascript:;',
+                            fun: function () {
+                            }
+                        },
+                    }
+                });
+            });
+            $("#cashsMess").on('click',function(){
+                                    var tips = "兑付时平台将收取兑付金额的5%作为服务费";
+                                bOilApp.tips({
+                    title: '提示',
+                    closeId: 'tipsCloseBtn',
+                    btnNums: 1,
+                    content: tips,
+                    btn: {
+                        btnSure: {
+                            text: '我知道了',
+                            href: 'javascript:;',
+                            fun: function () {
+                            }
+                        },
+                    }
+                });
+            });
+            $("#m_product_tank_desc").on('click',function(){
+                bOilApp.tips({
+                    title: '油箱抵扣使用规则',
+                    closeId: 'tipsCloseBtn',
+                    btnNums: 1,
+                    content: '订单实付金额需大于100元（含）；油箱可抵金额不得超过每笔订单实付金额的10%自己配哈',
+                    btn: {
+                        btnSure: {
+                            text: '我知道了',
+                            href: 'javascript:void(0);',
+                            fun: function () {
+                                console.log('取消了');
+                            }
+                        }
+                    },
+                    fixedHeight: false,
+                    alone: true
+                });
+            });
+            $("#oilMess").on('click',function(){
+                bOilApp.tips({
+                    title: '提示',
+                    closeId: 'tipsCloseBtn',
+                    btnNums: 1,
+                    content: '参考深圳市Ⅴ汽油92#发改委价格',
+                    btn: {
+                        btnSure: {
+                            text: '我知道了',
+                            href: 'javascript:;',
+                            fun: function () {
+                            }
+                        },
+                    }
+                });
+            });
+            $("#cashMess").on('click',function(){
+                bOilApp.tips({
+                    title: '提示',
+                    closeId: 'tipsCloseBtn',
+                    btnNums: 1,
+                    content: '参考深圳市Ⅴ汽油92#发改委价格',
+                    btn: {
+                        btnSure: {
+                            text: '我知道了',
+                            href: 'javascript:;',
+                            fun: function () {
+                            }
+                        },
+                    }
+                });
+            });
+            //pro-detail-tag切换
+            $('.pro-detail-tag li').on('click', function () {
+                var index = $(this).index();
+                $(this).addClass('active').siblings().removeClass('active');
+                $('.pro-detail-cons > div').eq(index).show().siblings().hide();
+            });
+
+            //点击显示更多、返回顶部
+            var cShow =  $('.click-show'),
+                 cTop = $('.click-top'),
+                 pDetail = $('.pro-detail');
+            cShow.on('click', function(){
+                $(this).hide();
+                pDetail.show();
+                cTop.show();
+                var pdTop = pDetail.offset().top;
+                $('html, body').animate({scrollTop:pdTop}, 1000);
+            });
+            cTop.on('click', function(){
+                $(this).hide();
+                cShow.show();
+                var pdTop = pDetail.offset().top;
+                $('html, body').animate({scrollTop:-pdTop}, 1000);
+                setTimeout(function(){
+                    pDetail.hide();
+                },500);
+            });
+            _this.profitTpl();
+            _this.calcTotalPrice();
+            //_this.calCashNum();
+        },
+        submitStatus:function (status) {
+            if(!status){
+                return
+            }
+            var submitBtn = $('#product_saveoilcard_buy_btn');
+            /*if(status === 'on'){
+                submitBtn.removeClass('disabled').removeAttr('disabled');
+            }else{
+                submitBtn.addClass('disabled').attr('disabled','disabled');
+            }*/
+        }
+    };
+
+    $(function() {
+        App.init();
+    });
+
+</script>
+
+</body></html>
