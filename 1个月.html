@@ -611,7 +611,7 @@
                 _this.submitStatus('on');
                 $this.siblings('input').val(cartNum*basePrice);
             });
-
+/*
             $('#cartCounter input').on('blur',function(){
 			console.log("on ----------blur")
                 _this.canSubmit = true;
@@ -646,12 +646,13 @@
                         _this.profitTpl();
                         _this.calcTotalPrice();
                         //_this.calCashNum();
-                    });*/
+                    });**** /
                 }
-            });
+            });*/
 
             $('#cartCounter input').on('input',function(){
 			console.log("on iiiiiiiinput")
+			alert("input ")
                 $(this).val($(this).val().replace(/[^0-9]/g,''));
 				   _this.profitTpl();
                     _this.calcTotalPrice();
