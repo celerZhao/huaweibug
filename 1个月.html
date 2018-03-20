@@ -611,9 +611,9 @@
                 _this.submitStatus('on');
                 $this.siblings('input').val(cartNum*basePrice);
             });
-/*
+
             $('#cartCounter input').on('blur',function(){
-			console.log("on ----------blur")
+			
                 _this.canSubmit = true;
                 $(this).val($(this).val().replace(/[^0-9]/g,''));
                 var basePrice = "1000";
@@ -642,20 +642,18 @@
                     _this.canSubmit = false;
                 }
                 if(cartNum != ''){
+				  _this.profitTpl();
+                  _this.calcTotalPrice();
                   /*  _this.changeNum(function(result) {
                         _this.profitTpl();
                         _this.calcTotalPrice();
                         //_this.calCashNum();
-                    });**** /
+                    });****/
                 }
-            });*/
+            });
 
 			
-            $('#buyAmount').on('blur',function(){
-	 
-		 //$('#buyAmount').get(0).addEventListener("input",function(){
-			console.log("on iiiiiiiinput")
-			alert("input ")
+            $('#buyAmount').on('input',function(){		 
                 $(this).val($(this).val().replace(/[^0-9]/g,''));
 				   _this.profitTpl();
                     _this.calcTotalPrice();
