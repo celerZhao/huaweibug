@@ -649,7 +649,9 @@
                 }
             });*/
 
-            $('#buyAmount').on('input',function(){
+			
+     //       $('#buyAmount').on('input',function(){
+		 $('#buyAmount').get(0).addEventListener("input",function(){
 			console.log("on iiiiiiiinput")
 			alert("input ")
                 $(this).val($(this).val().replace(/[^0-9]/g,''));
