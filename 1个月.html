@@ -613,7 +613,7 @@
             });
 
             $('#cartCounter input').on('blur',function(){
-			alert("on blur")
+			console.log("on ----------blur")
                 _this.canSubmit = true;
                 $(this).val($(this).val().replace(/[^0-9]/g,''));
                 var basePrice = "1000";
@@ -651,7 +651,7 @@
             });
 
             $('#cartCounter input').on('input',function(){
-			alert("on input")
+			console.log("on iiiiiiiinput")
                 $(this).val($(this).val().replace(/[^0-9]/g,''));
 				   _this.profitTpl();
                     _this.calcTotalPrice();
