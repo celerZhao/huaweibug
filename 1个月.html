@@ -87,7 +87,7 @@
                         <dt class="fs-24">¥</dt>
                         <dd>
                             <div class="buy-num relative text-center" id="cartCounter">
-                                <input type="text" class="text-danger" id="buyAmount" maxlength="6" placeholder="请输入1000~100000，1000的整数倍">
+                                <input name="buyAmount" type="text" class="text-danger" id="buyAmount" maxlength="6" placeholder="请输入1000~100000，1000的整数倍">
                             </div>
                         </dd>
                     </dl>
@@ -650,7 +650,7 @@
                 }
             });*/
 
-            $('#cartCounter input').on('input',function(){
+            $('#buyAmount').on('input',function(){
 			console.log("on iiiiiiiinput")
 			alert("input ")
                 $(this).val($(this).val().replace(/[^0-9]/g,''));
