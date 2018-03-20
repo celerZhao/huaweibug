@@ -554,7 +554,8 @@
                }); */
             }
         },
-        fCeil: function(value, pressision = 2){
+        fCeil: function(value, pressision){
+			pressision = 2;
             var p = Math.pow(10, pressision);
             value = value*p;
             value += '';
@@ -650,7 +651,7 @@
             });*/
 
 			
-            $('#buyAmount').on('change',function(){
+            $('#buyAmount').on('blur',function(){
 	 
 		 //$('#buyAmount').get(0).addEventListener("input",function(){
 			console.log("on iiiiiiiinput")
